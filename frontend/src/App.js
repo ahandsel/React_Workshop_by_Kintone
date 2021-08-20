@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js - Parent React Component
+
+import { useState, useEffect } from 'react';
+
+import RecordsList from './components/recordsList.js'
+import RecordInput from './components/recordInput.js'
+
+import getKintoneRecords from './requests/getKintoneRecords';
 
 function App() {
+
+  const [listItems, setListItems] = useState('*** now loading ***');
+
+  useEffect(() => {
+    getKintoneRecords().then(
+      result => setListItems(result)
+    );
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RecordsList list={listItems} />
+      <RecordInput setListItems={setListItems} /> {/* Append */}
     </div>
   );
 }

@@ -7,8 +7,13 @@ const fetch = require('node-fetch');
 const PORT = 5000;
 const app = express();
 
-// Optional - Hiding Kintone API Token
+// Installing dotenv to hide sensitive info
 require('dotenv').config();
+
+// Getting the Kintone Credentials from a .env file
+const subdomain = process.env.SUBDOMAIN;
+const appID = process.env.APPID;
+const apiToken = process.env.APITOKEN;
 
 // Parse incoming requests with JSON payloads
 app.use(express.json());
@@ -18,11 +23,6 @@ app.use(cors());
 const corsOptions = {
   origin: 'http://localhost:3000'
 };
-
-// Kintone API Setup + hiding w/ dotenv
-const subdomain = process.env.SUBDOMAIN;
-const appID = process.env.APPID;
-const apiToken = process.env.APITOKEN;
 
 // Append a Query Parameters to the Request Endpoint
 const parameters = 'query=order by recordID asc';

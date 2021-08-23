@@ -1,4 +1,4 @@
-// getKintoneRecords.js - Create a list array
+// getRecords.js - Create a list array
 
 // Create an array of lists by looping through Kintone's responded array
 
@@ -11,7 +11,7 @@
 // Declare the GET endpoint defined in our Express server
 const getRecordsEndpoint = 'http://localhost:5000/getData';
 
-export default async function getKintoneRecords() {
+export default async function getRecords() {
   const response = await fetch(getRecordsEndpoint);
   const jsonResponse = await response.json();
 

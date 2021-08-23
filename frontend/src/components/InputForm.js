@@ -3,7 +3,7 @@
 // Get started by importing the React JavaScript library & Hook
 import React, { useState } from 'react';
 
-import getKintoneRecords from '../requests/getKintoneRecords.js';
+import getRecords from '../requests/getRecords.js';
 import postKintoneRecord from '../requests/postKintoneRecord.js';
 
 function InputForm(props) {
@@ -12,7 +12,7 @@ function InputForm(props) {
 
   function buttonClick(title, author) {
     postKintoneRecord(title, author)
-      .then(() => getKintoneRecords())
+      .then(() => getRecords())
       .then(result => props.setListItems(result))
   }
 

@@ -8,7 +8,7 @@ import ListRecords from './components/ListRecords.js'
 import InputForm from './components/InputForm.js'
 
 // Import the script to make GET API calls
-import getKintoneRecords from './requests/getKintoneRecords';
+import getRecords from './requests/getRecords.js';
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
   // 2nd = Array of dependencies to control when effect is to be executed after mounting the component; Empty array = only invoke effect once
 
   useEffect(() => {
-    getKintoneRecords().then(
+    getRecords().then(
       result => setListItems(result)
     );
   }, []);

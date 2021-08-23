@@ -4,11 +4,11 @@
 import React, { useState, useEffect } from 'react';
 
 // Import the list & form components
-import RecordsList from './components/recordsList.js'
-import RecordInput from './components/recordInput.js'
+import ListRecords from './components/ListRecords.js'
+import InputForm from './components/InputForm.js'
 
 // Import the script to make GET API calls
-import getKintoneRecords from './requests/getKintoneRecords';
+import getRecords from './requests/getRecords.js';
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
   // 2nd = Array of dependencies to control when effect is to be executed after mounting the component; Empty array = only invoke effect once
 
   useEffect(() => {
-    getKintoneRecords().then(
+    getRecords().then(
       result => setListItems(result)
     );
   }, []);
@@ -29,8 +29,8 @@ function App() {
   return (
     // JSX includes html-like syntax
     <div>
-      <RecordsList list={listItems} />
-      <RecordInput setListItems={setListItems} /> {/* Append */}
+      <ListRecords list={listItems} />
+      <InputForm setListItems={setListItems} /> {/* Append */}
     </div>
   );
 }

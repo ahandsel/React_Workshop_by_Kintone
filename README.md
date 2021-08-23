@@ -14,11 +14,14 @@ Thank you for attending our **Kintone x React** workshop!
   * [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
     * [Kintone API Token](#kintone-api-token)
   * [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file)
-* [Encountered Problems?](#encountered-problems)
+* [Debugging - Let's Fix Those Problems?](#debugging---lets-fix-those-problems)
   * [How do I get my Kintone Subdomain?](#how-do-i-get-my-kintone-subdomain)
   * [Install Node & npm](#install-node--npm)
   * [React not updating after updating `server.js`?](#react-not-updating-after-updating-serverjs)
   * [Error from `Terminal 2 - backend`?](#error-from-terminal-2---backend)
+  * [No response when starting the Express server?](#no-response-when-starting-the-express-server)
+  * [Got a `UnhandledPromiseRejectionWarning` error?](#got-a-unhandledpromiserejectionwarning-error)
+  * [Got a `GAIA_IA02` error?](#got-a-gaia_ia02-error)
 
 ## Get Started
 
@@ -124,7 +127,7 @@ APPID = "1"
 APITOKEN = "dXNlckBleGFLtcGxlmNvbTpzZWNyZXQe9q3IhtcG"
 ```
 
-## Encountered Problems?
+## Debugging - Let's Fix Those Problems?
 
 Here is a rundown of problems & solutions that may occur during our workshop
 
@@ -166,3 +169,26 @@ This error is related to your Kintone credentials.
 2. Verify the Kintone credentials are correct: Subdomain, App ID, and API Token
 3. Verify that the Kintone App is configured as done in the [Create a Kintone Web Database App](#create-a-kintone-web-database-app) section
 4. Verify that the Kintone Web Database App is updated after generating the [Kintone API Token](#kintone-api-token)
+
+### No response when starting the Express server?
+Make sure you are inside the `backend` folder when starting the Express server
+
+```bash
+cd ~/Downloads/React_Workshop_by_Kintone/backend
+
+npm start
+```
+
+### Got a `UnhandledPromiseRejectionWarning` error?
+
+```text
+(node:5379) UnhandledPromiseRejectionWarning: FetchError: request to https://.kintone.com/k/v1/records.json?app= failed, reason: getaddrinfo ENOTFOUND .kintone.com
+```
+
+  * Looks like Kintone API credentials are missing
+  * Be sure to enter your Subdomain, App ID, and API Token in the `.env` file
+  * Confused? 🤔 → Check out the [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file) section
+
+### Got a `GAIA_IA02` error?
+  * Enter the App's API Token in `.env` file as `APITOKEN = ""`
+  * Be sure to hit the `save` button & the `Update App` button to implement the API Token change.

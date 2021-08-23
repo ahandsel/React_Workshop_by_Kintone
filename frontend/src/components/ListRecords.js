@@ -1,10 +1,10 @@
-// recordsList.js - Create a list based on the Kintone records
+// ListRecords.js - Create a list based on the Kintone records
 
 // This is a "function component”
 // It accepts an“props” (i.e., properties) object argument with data
 // It returns a React element
 
-export default function RecordsList(props) {
+export default function ListRecords(props) {
 
   return (
     <div>

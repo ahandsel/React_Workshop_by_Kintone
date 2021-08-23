@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Import the list & form components
-import RecordsList from './components/recordsList.js'
+import ListRecords from './components/ListRecords.js'
 import InputForm from './components/InputForm.js'
 
 // Import the script to make GET API calls
@@ -29,7 +29,7 @@ function App() {
   return (
     // JSX includes html-like syntax
     <div>
-      <RecordsList list={listItems} />
+      <ListRecords list={listItems} />
       <InputForm setListItems={setListItems} /> {/* Append */}
     </div>
   );

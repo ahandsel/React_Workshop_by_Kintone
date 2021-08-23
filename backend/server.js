@@ -1,4 +1,4 @@
-// server.js - Makes the Kintone API calls
+// backend - server.js - Makes the Kintone API calls
 
 // Express Server Setup
 const express = require('express');
@@ -25,6 +25,7 @@ const corsOptions = {
 };
 
 // Append a Query Parameters to the Request Endpoint
+// This query orders the records by their recordID in ascending order
 const parameters = 'query=order by recordID asc';
 
 // Kintone's Record(s) Endpoints

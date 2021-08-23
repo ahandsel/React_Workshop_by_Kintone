@@ -4,14 +4,14 @@
 import React, { useState } from 'react';
 
 import getRecords from '../requests/getRecords.js';
-import postKintoneRecord from '../requests/postKintoneRecord.js';
+import postRecord from '../requests/postRecord.js';
 
 function InputForm(props) {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
   function buttonClick(title, author) {
-    postKintoneRecord(title, author)
+    postRecord(title, author)
       .then(() => getRecords())
       .then(result => props.setListItems(result))
   }

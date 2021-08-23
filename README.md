@@ -53,7 +53,7 @@ Then inside the folders, download the required packages with `npm install`.
 | Install packages     | `npm install`                                               | `npm install`                                           |
 | Run the scripts      | `npm start`                                                 | `npm start`                                             |
 | View Results         | [localhost:3000](http://localhost:3000/)                    | [localhost:5000/getData](http://localhost:5000/getData) |
-| Expected Results     | React App listing out records from Kintone Web Database App |                                                         |
+| Expected Results     | React App listing out records from Kintone Web Database App | Raw API response in JSON with all the records           |
 
 ## Kintone Web Database & Credentials
 *Built for teamwork, designed by you*

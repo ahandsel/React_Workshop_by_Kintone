@@ -52,7 +52,7 @@ Then inside the folders, download the required packages with `npm install`.
 | Go inside the folder | `cd ~/Downloads/React_Workshop_by_Kintone/frontend`         | `cd ~/Downloads/React_Workshop_by_Kintone/backend`      |
 | Install packages     | `npm install`                                               | `npm install`                                           |
 | Run the scripts      | `npm start`                                                 | `npm start`                                             |
-| View Results         | [localhost:3000](http://localhost:3000/)                   | [localhost:5000/getData](http://localhost:5000/getData) |
+| View Results         | [localhost:3000](http://localhost:3000/)                    | [localhost:5000/getData](http://localhost:5000/getData) |
 | Expected Results     | React App listing out records from Kintone Web Database App |                                                         |
 
 ## Kintone Web Database & Credentials

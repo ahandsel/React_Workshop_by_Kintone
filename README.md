@@ -10,12 +10,12 @@ Thank you for attending our **Kintone x React** workshop!
   * [🚀 Getting your FREE Kintone Database](#-getting-your-free-kintone-database)
     * [① Sign-Up for Developer Program Account (Website) 🌐](#-sign-up-for-developer-program-account-website-)
     * [② THEN Create a Kintone Subdomain (Database) 📂](#-then-create-a-kintone-subdomain-database-)
-    * [📺 Sign up for Kintone Developer Program & Developer License](#-sign-up-for-kintone-developer-program--developer-license)
-  * [Create a Kintone App](#create-a-kintone-app)
+    * [Video: Sign up for Kintone Developer Program & Developer License](#video-sign-up-for-kintone-developer-program--developer-license)
+  * [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
   * [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file)
 * [Encountered Problems?](#encountered-problems)
   * [How do I get my Kintone Subdomain?](#how-do-i-get-my-kintone-subdomain)
-  * [💾 Install Node & npm](#-install-node--npm)
+  * [Install Node & npm](#install-node--npm)
   * [Error from `Terminal 2 - backend`?](#error-from-terminal-2---backend)
 
 ## Get Started
@@ -73,12 +73,12 @@ Then inside the folders, download the required packages with `npm install`.
 
 Confused? 🤔 → Check out the video below:
 
-#### 📺 Sign up for Kintone Developer Program & Developer License
+#### Video: Sign up for Kintone Developer Program & Developer License
 
 [![https://youtu.be/Gzz8SbTuoFg](https://img.youtube.com/vi/Gzz8SbTuoFg/mq1.jpg)](https://youtu.be/Gzz8SbTuoFg)  
 <https://youtu.be/Gzz8SbTuoFg>
 
-### Create a Kintone App
+### Create a Kintone Web Database App
 
 Let's create a Kintone App to list off your favorite [Manga](https://en.wikipedia.org/wiki/Manga)s!
 
@@ -120,7 +120,7 @@ It might be a bit confusing since since you need to sign-up for [Developer Progr
 Check out our [Sign up for Kintone Developer Program & Developer License](https://youtu.be/Gzz8SbTuoFg) YouTube video:
   * [![https://youtu.be/Gzz8SbTuoFg](https://img.youtube.com/vi/Gzz8SbTuoFg/mq1.jpg)](https://youtu.be/Gzz8SbTuoFg)
 
-### 💾 Install Node & npm
+### Install Node & npm
 The code in the workshop requires Node ≥ 10.16 and npm ≥ 5.6.
 
 Confused? 🤔 → Check out our [Install Node.JS on macOS & Windows and Create a Sample React App - YouTube](https://www.youtube.com/watch?v=4Kw-i_rX3tY) Video!

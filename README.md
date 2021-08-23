@@ -12,10 +12,12 @@ Thank you for attending our **Kintone x React** workshop!
     * [② THEN Create a Kintone Subdomain (Database) 📂](#-then-create-a-kintone-subdomain-database-)
     * [Video: Sign up for Kintone Developer Program & Developer License](#video-sign-up-for-kintone-developer-program--developer-license)
   * [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
+    * [Kintone API Token](#kintone-api-token)
   * [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file)
 * [Encountered Problems?](#encountered-problems)
   * [How do I get my Kintone Subdomain?](#how-do-i-get-my-kintone-subdomain)
   * [Install Node & npm](#install-node--npm)
+  * [React not updating after updating `server.js`?](#react-not-updating-after-updating-serverjs)
   * [Error from `Terminal 2 - backend`?](#error-from-terminal-2---backend)
 
 ## Get Started
@@ -92,6 +94,18 @@ Here are the required fields & their configurations for our workshop:
 
 ![Create_App_Demo.gif Kintone_React_Workshop v2.1](https://user-images.githubusercontent.com/30670749/125898739-1bc018ac-1740-40e0-91cc-ab829192d2ea.gif)
 
+#### Kintone API Token
+
+To generate an API Token for a Kintone App:
+1. Go to the Kintone App
+2. Go to the Gear icon ⚙️ (top right corner) > Open the App Settings page
+3. Click on the **App Settings** Tab > Click on **API Token** settings
+4. Click the `Generate` button to generate a token
+5. Click the `Save` button (top left corner) to save the token setting
+6. Finally, click the `Update App` button (top right corner) to implement the token setting change.
+
+<!-- ![Generating an API Token Gif](https://user-images.githubusercontent.com/30670749/111570449-3964c580-87e8-11eb-83ee-9a6a1ff2e8df.gif) -->
+
 ### 🔐 Securely input your credentials in a `.env` file
 In the `backend` folder, create a `.env` file.  
 Follow the template below and input your Kintone credentials.
@@ -126,6 +140,12 @@ The code in the workshop requires Node ≥ 10.16 and npm ≥ 5.6.
 Confused? 🤔 → Check out our [Install Node.JS on macOS & Windows and Create a Sample React App - YouTube](https://www.youtube.com/watch?v=4Kw-i_rX3tY) Video!
   * [![https://youtu.be/4Kw-i_rX3tY](https://img.youtube.com/vi/4Kw-i_rX3tY/mq1.jpg)](https://youtu.be/4Kw-i_rX3tY)
 
+### React not updating after updating `server.js`?
+After making changes to `server.js`, be sure to restart the Express server On the `Terminal 2 - backend`!  
+  * Stop the server: `ctrl + c`
+  * Start the server: `npm start`
+
+Then reload the browser showing the React App: [localhost:3000](http://localhost:3000/)
 
 ### Error from `Terminal 2 - backend`?
 Do you see an error on `.../React_Workshop_by_Kintone/backend/node_modules/node-fetch/lib/index.js:272` like the following?
@@ -144,5 +164,5 @@ FetchError: invalid json response body at https://r.kintone.com/notfound/subdoma
 This error is related to your Kintone credentials.
 1. Verify that you have created a `.env` file with your Kintone credentials inside the `backend` folder
 2. Verify the Kintone credentials are correct: Subdomain, App ID, and API Token
-3. Verify that the Kintone Web Database App is updated after generating the API token
-4. Verify that the Kintone App is configured as done in the [Create a Kintone App](#create-a-kintone-app) section
+3. Verify that the Kintone App is configured as done in the [Create a Kintone Web Database App](#create-a-kintone-web-database-app) section
+4. Verify that the Kintone Web Database App is updated after generating the [Kintone API Token](#kintone-api-token)

@@ -6,6 +6,7 @@ Thank you for attending our **Kintone x React** workshop!
 
 ## Outline <!-- omit in toc -->
 * [Get Started](#get-started)
+* [Overview of the Repo](#overview-of-the-repo)
 * [Kintone Web Database & Credentials](#kintone-web-database--credentials)
   * [🚀 Getting your FREE Kintone Database](#-getting-your-free-kintone-database)
     * [① Sign-Up for Developer Program Account (Website) 🌐](#-sign-up-for-developer-program-account-website-)
@@ -60,6 +61,20 @@ Then inside the folders, download the required packages with `npm install`.
 | View Results         | [localhost:3000](http://localhost:3000/)                    | [localhost:5000/getData](http://localhost:5000/getData) |
 | Expected Results     | React App listing out records from Kintone Web Database App | Raw API response in JSON with all the records           |
 
+## Overview of the Repo
+
+| File                                                     | Path                                     | Purpose                                                   | Need to Modify?    |
+| -------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------- | ------------------ |
+| [index.js](frontend/src/index.js)                        | `frontend/src/index.js`                  |                                                           | *Nope*             |
+| [index.html](frontend/public/index.html)                 | `frontend/public/index.html`             |                                                           | *Nope*             |
+| [App.js](frontend/src/App.js)                            | `frontend/src/App.js`                    |                                                           | Yes! - Append POST |
+| [getRecords.js](frontend/src/requests/getRecords.js)     | `frontend/src/requests/getRecords.js`    |                                                           | *Nope*             |
+| [ListRecords.js](frontend/src/components/ListRecords.js) | `frontend/src/components/ListRecords.js` |                                                           | *Nope*             |
+| [.env](backend/.env)                                     | `backend/.env`                           | Holds your Kintone credentials                            | Yes! - Create      |
+| [server.js](backend/server.js)                           | `backend/server.js`                      | Setup the Express server that makes the Kintone API calls | Yes! - Append POST |
+| [postRecord.js](frontend/src/requests/postRecord.js)     | `frontend/src/requests/postRecord.js`    | Pass the POST API request from React to Express server    | Yes! - Code it     |
+| [InputForm.js](frontend/src/components/InputForm.js)     | `frontend/src/components/InputForm.js`   | Appends the form that is used to create a POST API call   | Yes! - Code it     |
+
 ## Kintone Web Database & Credentials
 *Built for teamwork, designed by you*
 
@@ -85,7 +100,7 @@ Confused? 🤔 → Check out the video below:
 
 ### Create a Kintone Web Database App
 
-Let's create a Kintone App to list off your favorite [Manga](https://en.wikipedia.org/wiki/Manga)s!
+Let's create a Kintone App to list off your favorite [manga](https://en.wikipedia.org/wiki/Manga)s!
 
 Here are the required fields & their configurations for our workshop:
 
@@ -93,7 +108,7 @@ Here are the required fields & their configurations for our workshop:
 | ------------- | ------------- | ---------- | -------------------------------- |
 | Text          | Title         | `title`    | The manga's title                |
 | Text          | Author        | `author`   | The manga's author               |
-| Record number | Record number | `recordID` | Auto generated ID for each entry |
+| Record number | Record number | `recordID` | Auto-generated ID for each entry |
 
 ![Create_App_Demo.gif Kintone_React_Workshop v2.1](https://user-images.githubusercontent.com/30670749/125898739-1bc018ac-1740-40e0-91cc-ab829192d2ea.gif)
 
@@ -132,7 +147,7 @@ APITOKEN = "dXNlckBleGFLtcGxlmNvbTpzZWNyZXQe9q3IhtcG"
 Here is a rundown of problems & solutions that may occur during our workshop
 
 ### How do I get my Kintone Subdomain?
-It might be a bit confusing since since you need to sign-up for [Developer Program Account (Website) 🌐](https://bit.ly/KDP_signup) BEFORE creating your [Kintone Subdomain (Database) 📂](http://bit.ly/K_DevLic).
+It might be a bit confusing since you need to sign-up for [Developer Program Account (Website) 🌐](https://bit.ly/KDP_signup) BEFORE creating your [Kintone Subdomain (Database) 📂](http://bit.ly/K_DevLic).
 
 Check out our [Sign up for Kintone Developer Program & Developer License](https://youtu.be/Gzz8SbTuoFg) YouTube video:
   * [![https://youtu.be/Gzz8SbTuoFg](https://img.youtube.com/vi/Gzz8SbTuoFg/mq1.jpg)](https://youtu.be/Gzz8SbTuoFg)
@@ -171,7 +186,7 @@ This error is related to your Kintone credentials.
 4. Verify that the Kintone Web Database App is updated after generating the [Kintone API Token](#kintone-api-token)
 
 ### No response when starting the Express server?
-Make sure you are inside the `backend` folder when starting the Express server
+Make sure you are inside the `backend` folder when starting the Express server.
 
 ```bash
 cd ~/Downloads/React_Workshop_by_Kintone/backend
@@ -185,7 +200,7 @@ npm start
 (node:5379) UnhandledPromiseRejectionWarning: FetchError: request to https://.kintone.com/k/v1/records.json?app= failed, reason: getaddrinfo ENOTFOUND .kintone.com
 ```
 
-  * Looks like Kintone API credentials are missing
+  * It looks like Kintone API credentials are missing
   * Be sure to enter your Subdomain, App ID, and API Token in the `.env` file
   * Confused? 🤔 → Check out the [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file) section
 

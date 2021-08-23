@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 
 // Import the list & form components
 import RecordsList from './components/recordsList.js'
-import RecordInput from './components/recordInput.js'
+import InputForm from './components/InputForm.js'
 
 // Import the script to make GET API calls
 import getKintoneRecords from './requests/getKintoneRecords';
@@ -30,7 +30,7 @@ function App() {
     // JSX includes html-like syntax
     <div>
       <RecordsList list={listItems} />
-      <RecordInput setListItems={setListItems} /> {/* Append */}
+      <InputForm setListItems={setListItems} /> {/* Append */}
     </div>
   );
 }

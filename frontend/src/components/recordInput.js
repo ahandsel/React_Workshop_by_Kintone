@@ -1,6 +1,7 @@
 // recordInput.js - Create a form that makes a POST request
 
-import { useState } from 'react';
+// Get started by importing the React JavaScript library & Hook
+import React, { useState } from 'react';
 
 import getKintoneRecords from '../requests/getKintoneRecords.js';
 import postKintoneRecord from '../requests/postKintoneRecord.js';

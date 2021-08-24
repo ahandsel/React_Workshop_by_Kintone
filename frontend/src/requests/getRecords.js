@@ -1,4 +1,4 @@
-// getRecords.js - Create a list array
+// getRecords.js - Gets Kintone records & creates a list array
 
 // Create an array of lists by looping through Kintone's responded array
 

@@ -2,16 +2,17 @@
 
 ## Let's POST Data to a Web Database From a React Component <!-- omit in toc -->
 
-Thank you for attending our **Kintone x React** workshop!  
+Thank you for attending our **Kintone x React** workshop!
 
 ## Outline <!-- omit in toc -->
+
 * [Get Started](#get-started)
 * [Overview of the Repo](#overview-of-the-repo)
 * [Kintone Web Database & Credentials](#kintone-web-database--credentials)
   * [🚀 Getting your FREE Kintone Database](#-getting-your-free-kintone-database)
     * [① Sign-Up for Developer Program Account (Website) 🌐](#-sign-up-for-developer-program-account-website-)
     * [② THEN Create a Kintone Subdomain (Database) 📂](#-then-create-a-kintone-subdomain-database-)
-    * [Video: Sign up for Kintone Developer Program & Developer License](#video-sign-up-for-kintone-developer-program--developer-license)
+    * [Confused? 🤔 → Sign up for Kintone Developer Program & Developer License Video](#confused---sign-up-for-kintone-developer-program--developer-license-video)
   * [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
     * [Kintone API Token](#kintone-api-token)
   * [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file)
@@ -63,22 +64,25 @@ Then inside the folders, download the required packages with `npm install`.
 
 ⚡ Note: Please ignore the package deprecation warnings ⚡
 
+🔎 The `npm install` command installs the required dependencies defined in the package.json files (in both the [frontend](frontend/package.json) & [backend](backend/package.json) folders) and generates a node_modules folder with the installed modules.
+
 ## Overview of the Repo
 
-| File                                                     | Path                                     | Purpose                                                   | Need to Modify?    |
-| -------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------- | ------------------ |
-| [index.js](frontend/src/index.js)                        | `frontend/src/index.js`                  |                                                           | *Nope*             |
-| [index.html](frontend/public/index.html)                 | `frontend/public/index.html`             |                                                           | *Nope*             |
-| [App.js](frontend/src/App.js)                            | `frontend/src/App.js`                    |                                                           | Yes! - Append POST |
-| [getRecords.js](frontend/src/requests/getRecords.js)     | `frontend/src/requests/getRecords.js`    |                                                           | *Nope*             |
-| [ListRecords.js](frontend/src/components/ListRecords.js) | `frontend/src/components/ListRecords.js` |                                                           | *Nope*             |
-| [.env](backend/.env)                                     | `backend/.env`                           | Holds your Kintone credentials                            | Yes! - Create      |
-| [server.js](backend/server.js)                           | `backend/server.js`                      | Setup the Express server that makes the Kintone API calls | Yes! - Append POST |
-| [postRecord.js](frontend/src/requests/postRecord.js)     | `frontend/src/requests/postRecord.js`    | Pass the POST API request from React to Express server    | Yes! - Code it     |
-| [InputForm.js](frontend/src/components/InputForm.js)     | `frontend/src/components/InputForm.js`   | Appends the form that is used to create a POST API call   | Yes! - Code it     |
+| File                                                     | Path                                     | Purpose                                                                 | Need to Modify?    |
+| -------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------- | ------------------ |
+| [index.js](frontend/src/index.js)                        | `frontend/src/index.js`                  | Renders React code & passes it to index.html; `ReactDOM.render(...);`   | _Nope_             |
+| [index.html](frontend/public/index.html)                 | `frontend/public/index.html`             | Homepage of the React App; `<div id="root"></div>`                      | _Nope_             |
+| [App.js](frontend/src/App.js)                            | `frontend/src/App.js`                    | **Parent Component** - combines the list & form components              | Yes! - Append POST |
+| [getRecords.js](frontend/src/requests/getRecords.js)     | `frontend/src/requests/getRecords.js`    | Gets Kintone records & creates a list array                             | _Nope_             |
+| [ListRecords.js](frontend/src/components/ListRecords.js) | `frontend/src/components/ListRecords.js` | **List component** - Create a list from the Kintone records list array  | _Nope_             |
+| [.env](backend/.env)                                     | `backend/.env`                           | Holds your Kintone credentials                                          | Yes! - Create      |
+| [server.js](backend/server.js)                           | `backend/server.js`                      | Sets up the Express server that makes the Kintone API calls             | Yes! - Append POST |
+| [postRecord.js](frontend/src/requests/postRecord.js)     | `frontend/src/requests/postRecord.js`    | Passes the POST API request from React to Express server                | Yes! - Code it     |
+| [InputForm.js](frontend/src/components/InputForm.js)     | `frontend/src/components/InputForm.js`   | **Form component** - Create a form that is used to make a POST API call | Yes! - Code it     |
 
 ## Kintone Web Database & Credentials
-*Built for teamwork, designed by you*
+
+_Built for teamwork, designed by you_
 
 ### 🚀 Getting your FREE Kintone Database
 
@@ -93,9 +97,7 @@ Then inside the folders, download the required packages with `npm install`.
     * ⚡ Only use lowercase, numbers, & hyphens in your subdomain
     * ⚠ Do not use uppercase nor special characters
 
-Confused? 🤔 → Check out the video below:
-
-#### Video: Sign up for Kintone Developer Program & Developer License
+#### Confused? 🤔 → Sign up for Kintone Developer Program & Developer License Video
 
 [![https://youtu.be/Gzz8SbTuoFg](https://img.youtube.com/vi/Gzz8SbTuoFg/mq1.jpg)](https://youtu.be/Gzz8SbTuoFg)  
 <https://youtu.be/Gzz8SbTuoFg>
@@ -117,16 +119,17 @@ Here are the required fields & their configurations for our workshop:
 #### Kintone API Token
 
 To generate an API Token for a Kintone App:
-1. Go to the Kintone App
-2. Go to the Gear icon ⚙️ (top right corner) > Open the App Settings page
-3. Click on the **App Settings** Tab > Click on **API Token** settings
-4. Click the `Generate` button to generate a token
-5. Click the `Save` button (top left corner) to save the token setting
-6. Finally, click the `Update App` button (top right corner) to implement the token setting change.
+  1. Go to the Kintone App
+  2. Go to the Gear icon ⚙️ (top right corner) > Open the App Settings page
+  3. Click on the **App Settings** Tab > Click on **API Token** settings
+  4. Click the `Generate` button to generate a token
+  5. Click the `Save` button (top left corner) to save the token setting
+  6. Finally, click the `Update App` button (top right corner) to implement the token setting change.
 
 <!-- ![Generating an API Token Gif](https://user-images.githubusercontent.com/30670749/111570449-3964c580-87e8-11eb-83ee-9a6a1ff2e8df.gif) -->
 
 ### 🔐 Securely input your credentials in a `.env` file
+
 In the `backend` folder, create a `.env` file.  
 Follow the template below and input your Kintone credentials.
 
@@ -149,25 +152,32 @@ APITOKEN = "dXNlckBleGFLtcGxlmNvbTpzZWNyZXQe9q3IhtcG"
 Here is a rundown of problems & solutions that may occur during our workshop
 
 ### How do I get my Kintone Subdomain?
+
 It might be a bit confusing since you need to sign-up for [Developer Program Account (Website) 🌐](https://bit.ly/KDP_signup) BEFORE creating your [Kintone Subdomain (Database) 📂](http://bit.ly/K_DevLic).
 
 Check out our [Sign up for Kintone Developer Program & Developer License](https://youtu.be/Gzz8SbTuoFg) YouTube video:
+
   * [![https://youtu.be/Gzz8SbTuoFg](https://img.youtube.com/vi/Gzz8SbTuoFg/mq1.jpg)](https://youtu.be/Gzz8SbTuoFg)
 
 ### Install Node & npm
+
 The code in the workshop requires Node ≥ 10.16 and npm ≥ 5.6.
 
 Confused? 🤔 → Check out our [Install Node.JS on macOS & Windows and Create a Sample React App - YouTube](https://www.youtube.com/watch?v=4Kw-i_rX3tY) Video!
+
   * [![https://youtu.be/4Kw-i_rX3tY](https://img.youtube.com/vi/4Kw-i_rX3tY/mq1.jpg)](https://youtu.be/4Kw-i_rX3tY)
 
 ### React not updating after updating `server.js`?
-After making changes to `server.js`, be sure to restart the Express server On the `Terminal 2 - backend`!  
+
+After making changes to `server.js`, be sure to restart the Express server On the `Terminal 2 - backend`!
+
   * Stop the server: `ctrl + c`
   * Start the server: `npm start`
 
 Then reload the browser showing the React App: [localhost:3000](http://localhost:3000/)
 
 ### Error from `Terminal 2 - backend`?
+
 Do you see an error on `.../React_Workshop_by_Kintone/backend/node_modules/node-fetch/lib/index.js:272` like the following?
 
 ```text
@@ -182,12 +192,13 @@ FetchError: invalid json response body at https://r.kintone.com/notfound/subdoma
 ```
 
 This error is related to your Kintone credentials.
-1. Verify that you have created a `.env` file with your Kintone credentials inside the `backend` folder
-2. Verify the Kintone credentials are correct: Subdomain, App ID, and API Token
-3. Verify that the Kintone App is configured as done in the [Create a Kintone Web Database App](#create-a-kintone-web-database-app) section
-4. Verify that the Kintone Web Database App is updated after generating the [Kintone API Token](#kintone-api-token)
+   1. Verify that you have created a `.env` file with your Kintone credentials inside the `backend` folder
+   2. Verify the Kintone credentials are correct: Subdomain, App ID, and API Token
+   3. Verify that the Kintone App is configured as done in the [Create a Kintone Web Database App](#create-a-kintone-web-database-app) section
+   4. Verify that the Kintone Web Database App is updated after generating the [Kintone API Token](#kintone-api-token)
 
 ### No response when starting the Express server?
+
 Make sure you are inside the `backend` folder when starting the Express server.
 
 ```bash
@@ -207,5 +218,6 @@ npm start
   * Confused? 🤔 → Check out the [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file) section
 
 ### Got a `GAIA_IA02` error?
+
   * Enter the App's API Token in `.env` file as `APITOKEN = ""`
   * Be sure to hit the `save` button & the `Update App` button to implement the API Token change.

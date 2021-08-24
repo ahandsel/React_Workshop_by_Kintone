@@ -1,4 +1,4 @@
-// ListRecords.js - Create a list based on the Kintone records
+// ListRecords.js - List component - Create a list from the Kintone records list array
 
 // This is a "function component”
 // It accepts an“props” (i.e., properties) object argument with data

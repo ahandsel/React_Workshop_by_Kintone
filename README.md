@@ -10,15 +10,16 @@ Thank you for attending our **Kintone x React** workshop!
 * [Overview of the Repo](#overview-of-the-repo)
 * [Kintone Web Database & Credentials](#kintone-web-database--credentials)
   * [🚀 Getting your FREE Kintone Database](#-getting-your-free-kintone-database)
-    * [① Sign-Up for Developer Program Account (Website) 🌐](#-sign-up-for-developer-program-account-website-)
-    * [② THEN Create a Kintone Subdomain (Database) 📂](#-then-create-a-kintone-subdomain-database-)
     * [Confused? 🤔 → Sign up for Kintone Developer Program & Developer License Video](#confused---sign-up-for-kintone-developer-program--developer-license-video)
   * [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
     * [Kintone API Token](#kintone-api-token)
   * [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file)
-* [Debugging - Let's Fix Those Problems?](#debugging---lets-fix-those-problems)
+* [Guide on Installing Node.js & npm](#guide-on-installing-nodejs--npm)
+  * [macOS with nodenv](#macos-with-nodenv)
+  * [Windows with nvm-windows](#windows-with-nvm-windows)
+* [Debugging - Let's Fix Those Problems!](#debugging---lets-fix-those-problems)
+  * [`npm install` command is not working](#npm-install-command-is-not-working)
   * [How do I get my Kintone Subdomain?](#how-do-i-get-my-kintone-subdomain)
-  * [Install Node & npm](#install-node--npm)
   * [React not updating after updating `server.js`?](#react-not-updating-after-updating-serverjs)
   * [Error from `Terminal 2 - backend`?](#error-from-terminal-2---backend)
   * [No response when starting the Express server?](#no-response-when-starting-the-express-server)
@@ -62,9 +63,17 @@ Then inside the folders, download the required packages with `npm install`.
 | View Results         | [localhost:3000](http://localhost:3000/)                    | [localhost:5000/getData](http://localhost:5000/getData) |
 | Expected Results     | React App listing out records from Kintone Web Database App | Raw API response in JSON with all the records           |
 
-⚡ Note: Please ignore the package deprecation warnings ⚡
+### ⚡ Notes ⚡ <!-- omit in toc -->
+⚡  React requires  **Node ≥ 10.16**  &  **npm ≥ 5.6**  ⚡  
+  * Check the versions inside the `React_Workshop_by_Kintone` folder:
+    * `node –v`
+    * `npm –v`
+  * Not the correct versions or Confused? 🤔 → Check out the [Guide on Installing Node.js & npm](#guide-on-installing-nodejs--npm) Section
 
-🔎 The `npm install` command installs the required dependencies defined in the package.json files (in both the [frontend](frontend/package.json) & [backend](backend/package.json) folders) and generates a node_modules folder with the installed modules.
+
+⚡  Note: Please ignore the package deprecation warnings  ⚡  
+
+🔎  The `npm install` command installs the required dependencies defined in the package.json files (in both the [frontend](frontend/package.json) & [backend](backend/package.json) folders) and generates a node_modules folder with the installed modules.
 
 ## Overview of the Repo
 
@@ -86,16 +95,16 @@ _Built for teamwork, designed by you_
 
 ### 🚀 Getting your FREE Kintone Database
 
-#### ① Sign-Up for Developer Program Account (Website) 🌐
+#### ① Sign-Up for Developer Program Account (Website) 🌐 <!-- omit in toc -->
   * [bit.ly/KDP_signup](https://bit.ly/KDP_signup)
-    * ⚠ Do NOT use Safari
-    * ⚡Accept Cookies First
-    * ✅ Use Chrome & Firefox
+    * ⚠  Do NOT use Safari
+    * ⚡  Accept Cookies First
+    * ✅  Use Chrome & Firefox
 
-#### ② THEN Create a Kintone Subdomain (Database) 📂
+#### ② THEN Create a Kintone Subdomain (Database) 📂 <!-- omit in toc -->
   * [bit.ly/K_DevLic](http://bit.ly/K_DevLic)
-    * ⚡ Only use lowercase, numbers, & hyphens in your subdomain
-    * ⚠ Do not use uppercase nor special characters
+    * ⚡  Only use lowercase, numbers, & hyphens in your subdomain
+    * ⚠  Do not use uppercase nor special characters
 
 #### Confused? 🤔 → Sign up for Kintone Developer Program & Developer License Video
 
@@ -147,9 +156,166 @@ APPID = "1"
 APITOKEN = "dXNlckBleGFLtcGxlmNvbTpzZWNyZXQe9q3IhtcG"
 ```
 
-## Debugging - Let's Fix Those Problems?
+---
+
+## Guide on Installing Node.js & npm
+  * [macOS with nodenv](#macos-with-nodenv)
+  * [Windows with nvm-windows](#windows-with-nvm-windows)
+  * [📺 YouTube Quick Videos Going Over the Node Install & Create-React-App](#-quick-videos-going-over-the-node-install--create-react-app)
+
+### Check if you already have Node.js or npm <!-- omit in toc -->
+React requires **Node ≥ 10.16** & **npm ≥ 5.6**  
+Go **inside** the `React_Workshop_by_Kintone` folder.
+
+  ```shell
+  $ node -v
+  $ npm -v
+  ```
+
+If Node & npm are missing, let's install them!
+
+**Options**:
+  * [macOS with nodenv](#macos-with-nodenv)
+  * [Windows with nvm-windows](#windows-with-nvm-windows)
+
+### macOS with [nodenv](https://github.com/nodenv/nodenv)
+We recommend installing Node.js using [nodenv](https://github.com/nodenv/nodenv) to manage node versions. This allows your computer to have a specific Node.js version per project.
+
+⚠️  Remove any existing installations of Node.js before installing nodenv! ⚠️  
+Having different Node.js installations can lead to conflict issues.
+
+**Step 1**: Install nodenv with [Homebrew](https://brew.sh/)
+  * Update Homebrew:
+
+    ```shell
+    brew update && brew upgrade
+    ```
+
+  * Install nodenv:
+
+    ```shell
+    brew install nodenv
+    ```
+
+**Step 2**: Set up nodenv shell integration
+  * Run the initialization command:
+
+    ```shell
+    nodenv init
+    ```
+
+  * Do as instructed by appending the following line into your shell's rc/profile file:
+
+    ```shell
+    eval "$(nodenv init -)"
+    ```
+
+    * For Zsh users:
+
+      ```shell
+      $ echo 'eval "$(nodenv init -)"' >> ~/.zshrc
+      $ cat < ~/.zshrc
+      ```
+
+    * For Bash users:
+
+      ```shell
+      $ echo 'eval "$(nodenv init -)"' >> ~/.bash_profile
+      $ cat < ~/.bash_profile
+      ```
+
+**Step 3**: Implement the changes
+
+Close & open a new Terminal window for the changes to take place.
+
+Optional: Verify that nodenv is properly set up using [nodenv-doctor](https://github.com/nodenv/nodenv-installer/blob/master/bin/nodenv-doctor) script.
+  * For those using Z shell (Zsh) shell:
+
+    ```shell
+    curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
+    ```
+
+  * Expected result:
+
+    ```shell
+    Checking for `nodenv' in PATH: /usr/local/bin/nodenv
+    Checking for nodenv shims in PATH: OK
+    Checking `nodenv install' support: /usr/local/bin/nodenv-install (node-build 3.0.22-4-g49c4cb9)
+    Counting installed Node versions: none
+      There aren't any Node versions installed under `~/.nodenv/versions'.
+      You can install Node versions like so: nodenv install 2.2.4
+    Auditing installed plugins: OK
+    ```
+
+**Step 4**: Install Node.js inside the React Workshop folder (`React_Workshop_by_Kintone`)
+  * Now you're ready to install specific Node.js versions!
+  * **Inside** `React_Workshop_by_Kintone` folder, install Node.js version `14.5.0`:
+
+    ```shell
+    $ cd React_Workshop_by_Kintone/
+    $ nodenv install 14.5.0
+    $ nodenv local 14.5.0
+    ```
+
+Alright! Your Mac is now armed with Node.js!  
+
+Download the required packages by going opening a terminal inside the `frontend` folder & `backend` folder & running the `npm install` command!  
+
+---
+
+### Windows with [nvm-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows)
+The following steps are straight from the Microsoft Docs on [Set up NodeJS on native Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows). We recommend installing and managing Node.js with [nvm-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows)
+
+⚠️  Remove any existing installations of Node.js before installing nvm-windows! ⚠️  
+Having different Node.js installations can lead to conflict issues.
+
+**Step 1**: Go to the [windows-nvm's latest release](https://github.com/coreybutler/nvm-windows/releases).
+
+**Step 2**: Download the **nvm-setup.zip** file for the most recent release.
+
+**Step 3**: Once downloaded, open the zip file, then open the **nvm-setup.exe** file.
+
+**Step 4**: The Setup-NVM-for-Windows installation wizard will walk you through the setup steps, including choosing the directory where both nvm-windows and Node.js will be installed.
+  * ![install-nvm-for-windows-wizard.png](https://docs.microsoft.com/en-us/windows/images/install-nvm-for-windows-wizard.png)
+
+**Step 5**: After the installation is complete, open PowerShell & enter `nvm ls`
+  * `nvm ls` lists out installed Node versions (should be none at this point)
+  * ![windows-nvm-powershell-no-node.png](https://docs.microsoft.com/en-us/windows/images/windows-nvm-powershell-no-node.png)
+
+**Step 6**: Install Node.js inside the React Workshop folder (`React_Workshop_by_Kintone`)
+  * Now you're ready to install specific Node.js versions!
+  * Inside `React_Workshop_by_Kintone` folder, install Node.js version `14.5.0`:
+
+    ```powershell
+    $ cd .\Documents\React_Workshop_by_Kintone
+    $ nvm install 14.5.0
+    $ nvm use 14.5.0
+    ```
+
+Alright! Your Windows is now armed with Node.js!  
+
+Download the required packages by going opening a terminal inside the `frontend` folder & `backend` folder & running the `npm install` command!  
+
+### ![YouTube](https://user-images.githubusercontent.com/30670749/92354102-a05c4000-f11c-11ea-8964-f96f052b1457.png) Quick Videos Going Over the Node Install & Create-React-App <!-- omit in toc -->
+
+<p align="center">
+  <a href="https://youtu.be/4Kw-i_rX3tY">
+    <img height="200" alt="Installing Node.js & Create a New React App YouTube Thumbnail"
+      src="https://img.youtube.com/vi/4Kw-i_rX3tY/mqdefault.jpg">
+  </a>
+</p>
+
+---
+
+## Debugging - Let's Fix Those Problems!  
 
 Here is a rundown of problems & solutions that may occur during our workshop
+
+### `npm install` command is not working
+1. Verify the Node.js & npm versions **inside** the `React_Workshop_by_Kintone` folder
+2. Just installed Node.js? Verify you configured Node.js versions **inside** the `React_Workshop_by_Kintone` folder
+  * Mac: `nodenv local 14.5.0`
+  * Windows: `nvm use 14.5.0`
 
 ### How do I get my Kintone Subdomain?
 
@@ -158,14 +324,6 @@ It might be a bit confusing since you need to sign-up for [Developer Program Acc
 Check out our [Sign up for Kintone Developer Program & Developer License](https://youtu.be/Gzz8SbTuoFg) YouTube video:
 
   * [![https://youtu.be/Gzz8SbTuoFg](https://img.youtube.com/vi/Gzz8SbTuoFg/mq1.jpg)](https://youtu.be/Gzz8SbTuoFg)
-
-### Install Node & npm
-
-The code in the workshop requires Node ≥ 10.16 and npm ≥ 5.6.
-
-Confused? 🤔 → Check out our [Install Node.JS on macOS & Windows and Create a Sample React App - YouTube](https://www.youtube.com/watch?v=4Kw-i_rX3tY) Video!
-
-  * [![https://youtu.be/4Kw-i_rX3tY](https://img.youtube.com/vi/4Kw-i_rX3tY/mq1.jpg)](https://youtu.be/4Kw-i_rX3tY)
 
 ### React not updating after updating `server.js`?
 

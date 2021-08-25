@@ -1,4 +1,4 @@
-// App.js - Parent React Component
+// App.js - Parent React Component - Combines the list & form components
 
 // Get started by importing the React JavaScript library & Hooks
 import React, { useState, useEffect } from 'react';

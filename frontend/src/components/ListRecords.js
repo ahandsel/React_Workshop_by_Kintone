@@ -1,4 +1,4 @@
-// ListRecords.js - List component - Create a list from the Kintone records list array
+// ListRecords.js - List component - Creates a list from the list items array
 
 // Accepts a “props” (i.e. properties) object passed from parent component
 // Returns a React element

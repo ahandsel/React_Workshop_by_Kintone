@@ -3,12 +3,12 @@
 // Get started by importing the React JavaScript library & Hooks
 import React, { useState, useEffect } from 'react';
 
+// Import the script to make GET API calls
+import getRecords from './requests/getRecords.js';
+
 // Import the list & form components
 import ListRecords from './components/ListRecords.js'
 import InputForm from './components/InputForm.js'
-
-// Import the script to make GET API calls
-import getRecords from './requests/getRecords.js';
 
 function App() {
 

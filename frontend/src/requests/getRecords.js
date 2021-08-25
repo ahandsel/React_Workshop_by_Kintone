@@ -1,12 +1,4 @@
-// getRecords.js - Create a list array
-
-// Create an array of lists by looping through Kintone's responded array
-
-// record.title.value = value of the Title field
-// record.author.value = value of the author field
-
-// When creating a list in React, assign an unique ID to each item
-// Use record.recordID.value for the items' key
+// getRecords.js - Fetches records, transforms response, and returns array
 
 // Declare the GET endpoint defined in our Express server
 const getRecordsEndpoint = 'http://localhost:5000/getData';
@@ -17,10 +9,21 @@ export default async function getRecords() {
 
   console.log(jsonResponse);
 
-  const arrayOfLists = jsonResponse.records.map(
-    record =>
-      <li key={record.recordID.value}><b>{record.title.value}</b> written by {record.author.value}</li>
+
+  let uniqueKey, title, author;
+
+  // Map (1->1 transform) an array of records from the formatted API response to an array of list items
+  const ListItemArray = jsonResponse.records.map(
+    record => {
+      // Unique keys help React identify which items have changed, are added, or are removed.
+      // Keys should be given to the elements inside the array to give the elements a stable identity.
+      uniqueKey = record.recordID.value;
+      title = record.title.value;
+      author = record.author.value;
+
+      return <li key={uniqueKey}><b>{title}</b> written by {author}</li>
+    }
   )
 
-  return arrayOfLists;
+  return ListItemArray;
 };

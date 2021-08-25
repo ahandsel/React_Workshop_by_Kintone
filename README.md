@@ -80,12 +80,12 @@ Then inside the folders, download the required packages with `npm install`.
 ### Expected Results
 Here are the expected results after running the `npm start` in both the terminals.
 
-|                                                      | Terminal 1 - Frontend                    | Terminal 2 - Backend |
-| ---------------------------------------------------- | ---------------------------------------- | -------------------- |
-| View Results                                         | [localhost:3000](http://localhost:3000/) | On the Terminal      |
-| Expected results just after install                  |                                          | backend@1.0.0 start  |
-| Expected results after creating `.env`               |                                          | backend@1.0.0 start  |
-| Expected results after adding the POST functionality |                                          | backend@1.0.0 start  |
+|                                                      | Terminal 1 - Frontend                    | Terminal 2 - Backend                                                                                       |
+| ---------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| View Results                                         | [localhost:3000](http://localhost:3000/) | On the Terminal                                                                                            |
+| Expected results just after install                  | `React App` <br> `*** now loading ***`   | `> backend@1.0.0 start` <br> `> node server.js`<br><br>`Backend server listening at http://localhost:5000` |
+| Expected results after creating `.env`               |                                          | backend@1.0.0 start                                                                                        |
+| Expected results after adding the POST functionality |                                          | backend@1.0.0 start                                                                                        |
 
 ## Overview of the Repo
 

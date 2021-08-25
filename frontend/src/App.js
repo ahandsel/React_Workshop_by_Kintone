@@ -30,7 +30,7 @@ function App() {
     // JSX includes html-like syntax
     <div>
       <ListRecords list={listItems} />
-      {/* Append form component Here */}
+      {/* Append form component here */}
     </div>
   );
 }

@@ -1,12 +1,11 @@
-// getRecords.js - Gets Kintone records & creates a list array
+// getRecords.js - Fetches Kintone records, transforms response, & returns an array of list item
 
-// Create an array of lists by looping through Kintone's responded array
-
-// record.title.value = value of the Title field
-// record.author.value = value of the author field
-
-// When creating a list in React, assign an unique ID to each item
-// Use record.recordID.value for the items' key
+/**
+ * Notes on Kintone responses:
+ * record.title.value = value of the Title field
+ * record.author.value = value of the Author field
+ * record.recordID.value = value of the Record number field (unique key for the record)
+ */
 
 // Declare the GET endpoint defined in our Express server
 const getRecordsEndpoint = 'http://localhost:5000/getData';

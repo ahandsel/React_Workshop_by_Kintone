@@ -1,4 +1,4 @@
-// getRecords.js - Fetches Kintone records, transforms response, & returns an array of list item
+// getRecords.js - Fetches Kintone records, transforms response, & returns array of list items
 
 /**
  * Notes on Kintone responses:
@@ -16,10 +16,18 @@ export default async function getRecords() {
 
   console.log(jsonResponse);
 
-  const arrayOfLists = jsonResponse.records.map(
-    record =>
-      <li key={record.recordID.value}><b>{record.title.value}</b> written by {record.author.value}</li>
+  let uniqueKey, title, author;
+
+  // Map (1->1 transform) an array of records from the formatted API response to an array of list items
+  const ListItemArray = jsonResponse.records.map(
+    record => {
+      uniqueKey = record.recordID.value;
+      title = record.title.value;
+      author = record.author.value;
+
+      return <li key={uniqueKey}><b>{title}</b> written by {author}</li>
+    }
   )
 
-  return arrayOfLists;
+  return ListItemArray;
 };

@@ -1,10 +1,12 @@
-// InputForm.js - Create a form that makes a POST request
+// InputForm.js - Form component - Create a form that submits a POST request
 
 // Import required files
 
 function InputForm(props) {
 
-  // Create the form that is used to create a POST API call
+  /* Create the component that submits a POST request */
+  // - - - - - - - START - - - - - - - -
 
+  // - - - - - - - END - - - - - - - - -
 };
 export default InputForm;

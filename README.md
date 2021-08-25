@@ -4,9 +4,10 @@
 
 Thank you for attending our **Kintone x React** workshop!
 
-## Outline <!-- omit in toc -->
+## Outline <!-- omit in toc --> <!-- markdownlint-disable MD007 -->
 
 * [Get Started](#get-started)
+  * [Expected Results](#expected-results)
 * [Overview of the Repo](#overview-of-the-repo)
 * [Kintone Web Database & Credentials](#kintone-web-database--credentials)
   * [🚀 Getting your FREE Kintone Database](#-getting-your-free-kintone-database)
@@ -25,6 +26,8 @@ Thank you for attending our **Kintone x React** workshop!
   * [No response when starting the Express server?](#no-response-when-starting-the-express-server)
   * [Got a `UnhandledPromiseRejectionWarning` error?](#got-a-unhandledpromiserejectionwarning-error)
   * [Got a `GAIA_IA02` error?](#got-a-gaia_ia02-error)
+
+<!-- markdownlint-enable MD007 -->
 
 ## Get Started
 
@@ -55,13 +58,12 @@ code .
 Let's open a terminal per folder.  
 Then inside the folders, download the required packages with `npm install`.
 
-|                      | Terminal 1 - Frontend                                       | Terminal 2 - Backend                                    |
-| -------------------- | ----------------------------------------------------------- | ------------------------------------------------------- |
-| Go inside the folder | `cd ~/Downloads/React_Workshop_by_Kintone/frontend`         | `cd ~/Downloads/React_Workshop_by_Kintone/backend`      |
-| Install packages     | `npm install`                                               | `npm install`                                           |
-| Run the scripts      | `npm start`                                                 | `npm start`                                             |
-| View Results         | [localhost:3000](http://localhost:3000/)                    | [localhost:5000/getData](http://localhost:5000/getData) |
-| Expected Results     | React App listing out records from Kintone Web Database App | Raw API response in JSON with all the records           |
+|                      | Terminal 1 - Frontend                               | Terminal 2 - Backend                               |
+| -------------------- | --------------------------------------------------- | -------------------------------------------------- |
+| Go inside the folder | `cd ~/Downloads/React_Workshop_by_Kintone/frontend` | `cd ~/Downloads/React_Workshop_by_Kintone/backend` |
+| What is inside?      | Code for the React App                              | Code for the Express server                        |
+| Install packages     | `npm install`                                       | `npm install`                                      |
+| To run the scripts   | `npm start`                                         | `npm start`                                        |
 
 ### ⚡ Notes ⚡ <!-- omit in toc -->
 ⚡  React requires  **Node ≥ 10.16**  &  **npm ≥ 5.6**  ⚡  
@@ -75,19 +77,29 @@ Then inside the folders, download the required packages with `npm install`.
 
 🔎  The `npm install` command installs the required dependencies defined in the package.json files (in both the [frontend](frontend/package.json) & [backend](backend/package.json) folders) and generates a node_modules folder with the installed modules.
 
+### Expected Results
+Here are the expected results after running the `npm start` in both the terminals.
+
+|                                                      | Terminal 1 - Frontend                    | Terminal 2 - Backend |
+| ---------------------------------------------------- | ---------------------------------------- | -------------------- |
+| View Results                                         | [localhost:3000](http://localhost:3000/) | On the Terminal      |
+| Expected results just after install                  |                                          | backend@1.0.0 start  |
+| Expected results after creating `.env`               |                                          | backend@1.0.0 start  |
+| Expected results after adding the POST functionality |                                          | backend@1.0.0 start  |
+
 ## Overview of the Repo
 
-| File                                                     | Path                                     | Purpose                                                                 | Need to Modify?    |
-| -------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------- | ------------------ |
-| [index.js](frontend/src/index.js)                        | `frontend/src/index.js`                  | Renders React code & passes it to index.html; `ReactDOM.render(...);`   | _Nope_             |
-| [index.html](frontend/public/index.html)                 | `frontend/public/index.html`             | Homepage of the React App; `<div id="root"></div>`                      | _Nope_             |
-| [App.js](frontend/src/App.js)                            | `frontend/src/App.js`                    | **Parent Component** - combines the list & form components              | Yes! - Append POST |
-| [getRecords.js](frontend/src/requests/getRecords.js)     | `frontend/src/requests/getRecords.js`    | Gets Kintone records & creates a list array                             | _Nope_             |
-| [ListRecords.js](frontend/src/components/ListRecords.js) | `frontend/src/components/ListRecords.js` | **List component** - Create a list from the Kintone records list array  | _Nope_             |
-| [.env](backend/.env)                                     | `backend/.env`                           | Holds your Kintone credentials                                          | Yes! - Create      |
-| [server.js](backend/server.js)                           | `backend/server.js`                      | Sets up the Express server that makes the Kintone API calls             | Yes! - Append POST |
-| [postRecord.js](frontend/src/requests/postRecord.js)     | `frontend/src/requests/postRecord.js`    | Passes the POST API request from React to Express server                | Yes! - Code it     |
-| [InputForm.js](frontend/src/components/InputForm.js)     | `frontend/src/components/InputForm.js`   | **Form component** - Create a form that is used to make a POST API call | Yes! - Code it     |
+| File                                                     | Path                                     | Purpose                                                                     | Need to Modify?    |
+| -------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------- | ------------------ |
+| [index.js](frontend/src/index.js)                        | `frontend/src/index.js`                  | Renders React code & passes it to index.html; `ReactDOM.render(...);`       | _Nope_             |
+| [index.html](frontend/public/index.html)                 | `frontend/public/index.html`             | Homepage of the React App; `<div id="root"></div>`                          | _Nope_             |
+| [App.js](frontend/src/App.js)                            | `frontend/src/App.js`                    | **Parent component** - Combines the list & form components                  | Yes! - Append POST |
+| [getRecords.js](frontend/src/requests/getRecords.js)     | `frontend/src/requests/getRecords.js`    | Fetches Kintone records, transforms response, & returns array of list items | _Nope_             |
+| [ListRecords.js](frontend/src/components/ListRecords.js) | `frontend/src/components/ListRecords.js` | **List component** - Creates a list from the list items array               | _Nope_             |
+| [.env](backend/.env)                                     | `backend/.env`                           | Holds your Kintone credentials                                              | Yes! - Create      |
+| [server.js](backend/server.js)                           | `backend/server.js`                      | Sets up the Express server routes API requests from the frontend to Kintone | Yes! - Append POST |
+| [postRecord.js](frontend/src/requests/postRecord.js)     | `frontend/src/requests/postRecord.js`    | Passes the POST API request from React to Express server                    | Yes! - Code it     |
+| [InputForm.js](frontend/src/components/InputForm.js)     | `frontend/src/components/InputForm.js`   | **Form component** - Create a form that submits a POST request              | Yes! - Code it     |
 
 ## Kintone Web Database & Credentials
 

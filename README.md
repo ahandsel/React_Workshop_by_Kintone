@@ -7,7 +7,6 @@ Thank you for attending our **Kintone x React** workshop!
 ## Outline <!-- omit in toc --> <!-- markdownlint-disable MD007 -->
 
 * [Get Started](#get-started)
-  * [Expected Results](#expected-results)
 * [Overview of the Repo](#overview-of-the-repo)
 * [Kintone Web Database & Credentials](#kintone-web-database--credentials)
   * [🚀 Getting your FREE Kintone Database](#-getting-your-free-kintone-database)
@@ -15,6 +14,10 @@ Thank you for attending our **Kintone x React** workshop!
   * [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
     * [Kintone API Token](#kintone-api-token)
   * [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file)
+* [Expected Results](#expected-results)
+  * [Right After `npm install`](#right-after-npm-install)
+  * [After Creating a `.env`](#after-creating-a-env)
+  * [After Completing the POST Section](#after-completing-the-post-section)
 * [Want the Slide Deck?](#want-the-slide-deck)
 * [Guide on Installing Node.js & npm](#guide-on-installing-nodejs--npm)
   * [macOS with nodenv](#macos-with-nodenv)
@@ -45,7 +48,7 @@ cd React_Workshop_by_Kintone
 ```bash
 ls
 
-README.md   backend   frontend   Slides.pdf
+README.md   Slides.pdf   backend   frontend
 ```
 
 Inside there should be two folders (`frontend` & `backend`) and a README file & Slides PDF.
@@ -77,16 +80,6 @@ Then inside the folders, download the required packages with `npm install`.
 ⚡  Note: Please ignore the package deprecation warnings  ⚡  
 
 🔎  The `npm install` command installs the required dependencies defined in the package.json files (in both the [frontend](frontend/package.json) & [backend](backend/package.json) folders) and generates a node_modules folder with the installed modules.
-
-### Expected Results
-Here are the expected results after running the `npm start` in both the terminals.
-
-|                                                      | Terminal 1 - Frontend                    | Terminal 2 - Backend                                                                                       |
-| ---------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| View Results                                         | [localhost:3000](http://localhost:3000/) | On the Terminal                                                                                            |
-| Expected results just after install                  | `React App` <br> `*** now loading ***`   | `> backend@1.0.0 start` <br> `> node server.js`<br><br>`Backend server listening at http://localhost:5000` |
-| Expected results after creating `.env`               |                                          | backend@1.0.0 start                                                                                        |
-| Expected results after adding the POST functionality |                                          | backend@1.0.0 start                                                                                        |
 
 ## Overview of the Repo
 
@@ -168,6 +161,32 @@ SUBDOMAIN = "devevents"
 APPID = "1"
 APITOKEN = "dXNlckBleGFLtcGxlmNvbTpzZWNyZXQe9q3IhtcG"
 ```
+
+---
+
+## Expected Results
+Here are the expected results after running the `npm start` in both the terminals.
+
+### Right After `npm install`
+
+|                  | Terminal 1 - Frontend                                                                                                | Terminal 2 - Backend                                                                                                 |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| View Results     | [localhost:3000](http://localhost:3000/)                                                                             | On the Terminal                                                                                                      |
+| Expected Results | ![React_v3_img/Terminal_1_A.png](https://github.com/ahandsel/img/blob/master/React_v3_img/Terminal_1_A.png?raw=true) | ![React_v3_img/Terminal_2_A.png](https://github.com/ahandsel/img/blob/master/React_v3_img/Terminal_2_A.png?raw=true) |
+
+### After Creating a `.env`
+
+|                  | Terminal 1 - Frontend                                                                                                | Terminal 2 - Backend                                                                                                 |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| View Results     | [localhost:3000](http://localhost:3000/)                                                                             | [localhost:5000/getData](http://localhost:5000/getData)                                                              |
+| Expected Results | ![React_v3_img/Terminal_1_B.png](https://github.com/ahandsel/img/blob/master/React_v3_img/Terminal_1_A.png?raw=true) | ![React_v3_img/Terminal_2_B.png](https://github.com/ahandsel/img/blob/master/React_v3_img/Terminal_2_A.png?raw=true) |
+
+### After Completing the POST Section
+
+|                  | Terminal 1 - Frontend                                                                                                | Terminal 2 - Backend |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| View Results     | [localhost:3000](http://localhost:3000/)                                                                             | n/a                  |
+| Expected Results | ![React_v3_img/Terminal_1_C.png](https://github.com/ahandsel/img/blob/master/React_v3_img/Terminal_1_C.png?raw=true) | n/a                  |
 
 ---
 

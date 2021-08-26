@@ -45,7 +45,7 @@ cd React_Workshop_by_Kintone
 ```bash
 ls
 
-README.md   backend   frontend   Slides.pdf
+README.md   Slides.pdf   backend   frontend
 ```
 
 Inside there should be two folders (`frontend` & `backend`) and a README file & Slides PDF.

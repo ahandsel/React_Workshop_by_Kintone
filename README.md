@@ -183,10 +183,10 @@ Here are the expected results after running the `npm start` in both the terminal
 
 ### After Completing the POST Section
 
-|                  | Terminal 1 - Frontend                                                                                                | Terminal 2 - Backend                                                                                                 |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| View Results     | [localhost:3000](http://localhost:3000/)                                                                             | [localhost:5000/getData](http://localhost:5000/getData)                                                              |
-<!-- | Expected Results | ![React_v3_img/Terminal_1_B.png](https://github.com/ahandsel/img/blob/master/React_v3_img/Terminal_1_A.png?raw=true) | ![React_v3_img/Terminal_2_B.png](https://github.com/ahandsel/img/blob/master/React_v3_img/Terminal_2_A.png?raw=true) | -->
+|                  | Terminal 1 - Frontend                                                                                                | Terminal 2 - Backend |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| View Results     | [localhost:3000](http://localhost:3000/)                                                                             | n/a                  |
+| Expected Results | ![React_v3_img/Terminal_1_C.png](https://github.com/ahandsel/img/blob/master/React_v3_img/Terminal_1_C.png?raw=true) | n/a                  |
 
 ---
 

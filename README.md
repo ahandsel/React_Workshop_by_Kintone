@@ -15,6 +15,7 @@ Thank you for attending our **Kintone x React** workshop!
   * [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
     * [Kintone API Token](#kintone-api-token)
   * [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file)
+* [Want the Slide Deck?](#want-the-slide-deck)
 * [Guide on Installing Node.js & npm](#guide-on-installing-nodejs--npm)
   * [macOS with nodenv](#macos-with-nodenv)
   * [Windows with nvm-windows](#windows-with-nvm-windows)
@@ -44,10 +45,10 @@ cd React_Workshop_by_Kintone
 ```bash
 ls
 
-README.md   backend   frontend
+README.md   backend   frontend   Slides.pdf
 ```
 
-Inside there should be two folders (`frontend` & `backend`) and a README file.
+Inside there should be two folders (`frontend` & `backend`) and a README file & Slides PDF.
 
 Open the `React_Workshop_by_Kintone` folder in [VS Code](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_command-line)
 
@@ -167,6 +168,12 @@ SUBDOMAIN = "devevents"
 APPID = "1"
 APITOKEN = "dXNlckBleGFLtcGxlmNvbTpzZWNyZXQe9q3IhtcG"
 ```
+
+---
+
+## Want the Slide Deck?
+
+Check it out at [Slides.pdf](Slides.pdf)
 
 ---
 

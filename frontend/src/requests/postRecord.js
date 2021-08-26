@@ -1,10 +1,12 @@
-// postRecord.js - POST the input to the Kintone Database App
+// postRecord.js - Passes the POST API request from React to Express server
 
-// Declare the POST endpoints defined in our Express server
+// Connect with the Express server
 const addRecordEndpoint = 'http://localhost:5000/postData';
 
-// Make REST API Calls & take in the values stored in the state variables related to the input fields
 export default async function postRecord(title, author) {
+
+  // Pass the POST API request from React to Express server
+
   const recordBodyParameters = {
     'title': title,
     author // ES6 syntax that functions the same as above
@@ -24,4 +26,5 @@ export default async function postRecord(title, author) {
   console.log(JSON.stringify(jsonResponse));
 
   return jsonResponse;
+
 };

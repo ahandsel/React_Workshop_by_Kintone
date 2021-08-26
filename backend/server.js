@@ -1,4 +1,4 @@
-// backend - server.js - Makes the Kintone API calls
+// backend - server.js - Routes API requests from the frontend to Kintone
 
 // Express Server Setup
 const express = require('express');
@@ -7,10 +7,10 @@ const fetch = require('node-fetch');
 const PORT = 5000;
 const app = express();
 
-// Installing dotenv to hide sensitive info
+// Hide sensitive info in a .env file with dotenv
 require('dotenv').config();
 
-// Getting the Kintone Credentials from a .env file
+// Get Kintone credentials from a .env file
 const subdomain = process.env.SUBDOMAIN;
 const appID = process.env.APPID;
 const apiToken = process.env.APITOKEN;
@@ -24,15 +24,15 @@ const corsOptions = {
   origin: 'http://localhost:3000'
 };
 
-// Append a Query Parameters to the Request Endpoint
-// This query orders the records by their recordID in ascending order
+// Append a query parameter to the request endpoint
+// This query orders records by their recordID in ascending order
 const parameters = 'query=order by recordID asc';
 
-// Kintone's Record(s) Endpoints
+// Kintone's record(s) endpoints
 const multipleRecordsEndpoint = `https://${subdomain}.kintone.com/k/v1/records.json?app=${appID}&${parameters}`
 const singleRecordEndpoint = `https://${subdomain}.kintone.com/k/v1/record.json?app=${appID}&${parameters}`;
 
-// This runs if a GET request calls for localhost:5000/getData
+// This route executes when a GET request lands on localhost:5000/getData
 app.get('/getData', cors(corsOptions), async (req, res) => {
   const fetchOptions = {
     method: 'GET',
@@ -45,8 +45,8 @@ app.get('/getData', cors(corsOptions), async (req, res) => {
   res.json(jsonResponse);
 });
 
-// Add the POST request call in the section below
-// - - - - - - - - - - - - - - - - - -
+// Add the POST request in the section below
+// - - - - - - - START - - - - - - - -
 
 // This runs if a POST request calls for localhost:5000/postData
 
@@ -75,9 +75,9 @@ app.post('/postData', cors(corsOptions), async (req, res) => {
   res.json(jsonResponse);
 });
 
-// - - - - - - - - - - - - - - - - - -
+// - - - - - - - END - - - - - - - -
 // Add a New Route for a POST request using singleRecordEndpoint
 
 app.listen(PORT, () => {
-  console.log(`Example app listening at http://localhost:${PORT}`);
+  console.log(`Backend server listening at http://localhost:${PORT}`);
 });

@@ -1,12 +1,16 @@
-// InputForm.js - Create a form that makes a POST request
+// InputForm.js - Form component - Create a form that submits a POST request
 
-// Get started by importing the React JavaScript library & Hook
+// Import required files
 import React, { useState } from 'react';
 
 import getRecords from '../requests/getRecords.js';
 import postRecord from '../requests/postRecord.js';
 
 function InputForm(props) {
+
+  /* Create the component that submits a POST request */
+  // - - - - - - - START - - - - - - - -
+
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
@@ -46,5 +50,7 @@ function InputForm(props) {
       </form>
     </div>
   );
+
+  // - - - - - - - END - - - - - - - - -
 };
 export default InputForm;

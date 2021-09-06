@@ -25,8 +25,8 @@ const corsOptions = {
 };
 
 // Append a query parameter to the request endpoint
-// This query orders records by their recordID in ascending order
-const parameters = 'query=order by recordID asc';
+// This query orders records by their Record_number in ascending order
+const parameters = 'query=order by Record_number asc';
 
 // Kintone's record(s) endpoints
 const multipleRecordsEndpoint = `https://${subdomain}.kintone.com/k/v1/records.json?app=${appID}&${parameters}`
@@ -47,6 +47,33 @@ app.get('/getData', cors(corsOptions), async (req, res) => {
 
 // Add the POST request in the section below
 // - - - - - - - START - - - - - - - -
+
+// This runs if a POST request calls for localhost:5000/postData
+
+app.post('/postData', cors(corsOptions), async (req, res) => {
+  const requestBody = {
+    'app': appID,
+    'record': {
+      'title': {
+        'value': req.body.title
+      },
+      'author': {
+        'value': req.body.author
+      }
+    }
+  };
+  const options = {
+    method: 'POST',
+    headers: {
+      'X-Cybozu-API-Token': apiToken,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(requestBody)
+  }
+  const response = await fetch(singleRecordEndpoint, options);
+  const jsonResponse = await response.json();
+  res.json(jsonResponse);
+});
 
 // - - - - - - - END - - - - - - - -
 // Add a New Route for a POST request using singleRecordEndpoint

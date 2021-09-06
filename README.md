@@ -144,8 +144,11 @@ To generate an API Token for a Kintone App:
 
 ### 🔐 Securely input your credentials in a `.env` file
 
-In the `backend` folder, create a `.env` file.  
-Follow the template below and input your Kintone credentials.
+In the `backend` folder, **rename** the `.env.example` to `.env`!
+
+Then following the template, input your Kintone credentials.  
+
+`.env` template:  
 
 ```.env
 SUBDOMAIN = ""

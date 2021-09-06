@@ -25,8 +25,8 @@ const corsOptions = {
 };
 
 // Append a query parameter to the request endpoint
-// This query orders records by their recordID in ascending order
-const parameters = 'query=order by recordID asc';
+// This query orders records by their Record_number in ascending order
+const parameters = 'query=order by Record_number asc';
 
 // Kintone's record(s) endpoints
 const multipleRecordsEndpoint = `https://${subdomain}.kintone.com/k/v1/records.json?app=${appID}&${parameters}`

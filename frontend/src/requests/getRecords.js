@@ -4,7 +4,7 @@
  * Notes on Kintone responses:
  * record.title.value = value of the Title field
  * record.author.value = value of the Author field
- * record.recordID.value = value of the Record number field (unique key for the record)
+ * record.Record_number.value = value of the Record number field (unique key for the record)
  */
 
 // Declare the GET endpoint defined in our Express server
@@ -21,7 +21,7 @@ export default async function getRecords() {
   // Map (1->1 transform) an array of records from the formatted API response to an array of list items
   const ListItemArray = jsonResponse.records.map(
     record => {
-      uniqueKey = record.recordID.value;
+      uniqueKey = record.Record_number.value;
       title = record.title.value;
       author = record.author.value;
 

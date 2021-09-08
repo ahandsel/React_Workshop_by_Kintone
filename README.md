@@ -116,8 +116,12 @@ _Built for teamwork, designed by you_
 
 #### Confused? 🤔 → Sign up for Kintone Developer Program & Developer License Video
 
-[![https://youtu.be/Gzz8SbTuoFg](https://img.youtube.com/vi/Gzz8SbTuoFg/mq1.jpg)](https://youtu.be/Gzz8SbTuoFg)  
-<https://youtu.be/Gzz8SbTuoFg>
+<p align="center">
+  <a href="https://youtu.be/Gzz8SbTuoFg">
+    <img height="200" alt="Create Kintone Database App - React Workshop Prep YouTube Thumbnail"
+      src="https://img.youtube.com/vi/Gzz8SbTuoFg/hqdefault.jpg">
+  </a>
+</p>
 
 ### Create a Kintone Web Database App
 
@@ -130,7 +134,9 @@ Here are the required fields & their configurations for our workshop:
 | Text       | Title      | `title`    | The manga's title  |
 | Text       | Author     | `author`   | The manga's author |
 
-![Create_App_Demo.gif Kintone_React_Workshop v2.1](https://user-images.githubusercontent.com/30670749/125898739-1bc018ac-1740-40e0-91cc-ab829192d2ea.gif)
+Confused? 🤔 → Check out the [Create Kintone Database App](https://youtu.be/pRtfn-8cf_I) video 📺  
+
+<!-- ![Create_App_Demo.gif Kintone_React_Workshop v2.1](https://user-images.githubusercontent.com/30670749/125898739-1bc018ac-1740-40e0-91cc-ab829192d2ea.gif) -->
 
 #### Kintone API Token
 
@@ -143,7 +149,16 @@ To generate an API Token for a Kintone App:
 5. Click the `Save` button (top left corner) to save the token setting
 6. Finally, click the `Update App` button (top right corner) to implement the token setting change.
 
-<!-- ![Generating an API Token Gif](https://user-images.githubusercontent.com/30670749/111570449-3964c580-87e8-11eb-83ee-9a6a1ff2e8df.gif) -->
+Confused? 🤔 → Check out the [Get the API Token](https://youtu.be/pRtfn-8cf_I?t=117) video clip 📺  
+
+### ![YouTube](https://user-images.githubusercontent.com/30670749/92354102-a05c4000-f11c-11ea-8964-f96f052b1457.png) Quick Videos Going Over Creating the Kintone Database App <!-- omit in toc -->
+
+<p align="center">
+  <a href="https://youtu.be/pRtfn-8cf_I">
+    <img height="200" alt="Create Kintone Database App - React Workshop Prep YouTube Thumbnail"
+      src="https://img.youtube.com/vi/pRtfn-8cf_I/hqdefault.jpg">
+  </a>
+</p>
 
 ### 🔐 Securely input your credentials in a `.env` file
 
@@ -357,7 +372,7 @@ Download the required packages by going opening a terminal inside the `frontend`
 <p align="center">
   <a href="https://youtu.be/4Kw-i_rX3tY">
     <img height="200" alt="Installing Node.js & Create a New React App YouTube Thumbnail"
-      src="https://img.youtube.com/vi/4Kw-i_rX3tY/mqdefault.jpg">
+      src="https://img.youtube.com/vi/4Kw-i_rX3tY/hqdefault.jpg">
   </a>
 </p>
 

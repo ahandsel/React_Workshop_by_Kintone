@@ -5,7 +5,8 @@ const addRecordEndpoint = 'http://localhost:5000/postData';
 
 export default async function postRecord(title, author) {
 
-  // Pass the POST API request from React to Express server
+  /* Pass the POST API request from React to Express server */
+  // - - - - - - - START - - - - - - - -
 
   const recordBodyParameters = {
     'title': title,
@@ -27,4 +28,5 @@ export default async function postRecord(title, author) {
 
   return jsonResponse;
 
+  // - - - - - - - END - - - - - - - - -
 };

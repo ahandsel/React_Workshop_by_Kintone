@@ -45,7 +45,7 @@ app.get('/getData', cors(corsOptions), async (req, res) => {
   res.json(jsonResponse);
 });
 
-// Add the POST request in the section below
+/* Add a new route for a POST request using singleRecordEndpoint in the section below */
 // - - - - - - - START - - - - - - - -
 
 // This runs if a POST request calls for localhost:5000/postData
@@ -76,7 +76,6 @@ app.post('/postData', cors(corsOptions), async (req, res) => {
 });
 
 // - - - - - - - END - - - - - - - -
-// Add a New Route for a POST request using singleRecordEndpoint
 
 app.listen(PORT, () => {
   console.log(`\n Backend server listening at http://localhost:${PORT} \n Confirm if Kintone records are being retrieved at \n http://localhost:${PORT}/getData`);

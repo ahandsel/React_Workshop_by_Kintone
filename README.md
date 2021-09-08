@@ -10,9 +10,10 @@ Thank you for attending our **Kintone x React** workshop!
 * [Overview of the Repo](#overview-of-the-repo)
 * [Kintone Web Database & Credentials](#kintone-web-database--credentials)
   * [🚀 Getting your FREE Kintone Database](#-getting-your-free-kintone-database)
-    * [Confused? 🤔 → Sign up for Kintone Developer Program & Developer License Video](#confused---sign-up-for-kintone-developer-program--developer-license-video)
+    * [📺 Sign up for Kintone Developer Program & Developer License | Video](#-sign-up-for-kintone-developer-program--developer-license--video)
   * [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
     * [Kintone API Token](#kintone-api-token)
+    * [📺 How to Create a Kintone Database App | Video](#-how-to-create-a-kintone-database-app--video)
   * [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file)
 * [Expected Results](#expected-results)
   * [Right After `npm install`](#right-after-npm-install)
@@ -22,6 +23,7 @@ Thank you for attending our **Kintone x React** workshop!
 * [Guide on Installing Node.js & npm](#guide-on-installing-nodejs--npm)
   * [macOS with nodenv](#macos-with-nodenv)
   * [Windows with nvm-windows](#windows-with-nvm-windows)
+  * [📺 Installing Node.js | Video](#-installing-nodejs--video)
 * [Debugging - Let's Fix Those Problems 💪](#debugging---lets-fix-those-problems-)
   * [`npm install` command is not working](#npm-install-command-is-not-working)
   * [How do I get my Kintone Subdomain?](#how-do-i-get-my-kintone-subdomain)
@@ -114,7 +116,7 @@ _Built for teamwork, designed by you_
     * ⚡ Only use lowercase, numbers, & hyphens in your subdomain
     * ⚠ Do not use uppercase nor special characters
 
-#### Confused? 🤔 → Sign up for Kintone Developer Program & Developer License Video
+#### 📺 Sign up for Kintone Developer Program & Developer License | Video
 
 <p align="center">
   <a href="https://youtu.be/Gzz8SbTuoFg">
@@ -134,7 +136,7 @@ Here are the required fields & their configurations for our workshop:
 | Text       | Title      | `title`    | The manga's title  |
 | Text       | Author     | `author`   | The manga's author |
 
-Confused? 🤔 → Check out the [Create Kintone Database App](https://youtu.be/pRtfn-8cf_I) video 📺  
+Confused? 🤔 → Check out the [How to Create a Kintone Database App](https://youtu.be/pRtfn-8cf_I) video 📺  
 
 <!-- ![Create_App_Demo.gif Kintone_React_Workshop v2.1](https://user-images.githubusercontent.com/30670749/125898739-1bc018ac-1740-40e0-91cc-ab829192d2ea.gif) -->
 
@@ -151,11 +153,11 @@ To generate an API Token for a Kintone App:
 
 Confused? 🤔 → Check out the [Get the API Token](https://youtu.be/pRtfn-8cf_I?t=117) video clip 📺  
 
-### ![YouTube](https://user-images.githubusercontent.com/30670749/92354102-a05c4000-f11c-11ea-8964-f96f052b1457.png) Quick Videos Going Over Creating the Kintone Database App <!-- omit in toc -->
+#### 📺 How to Create a Kintone Database App | Video
 
 <p align="center">
   <a href="https://youtu.be/pRtfn-8cf_I">
-    <img height="200" alt="Create Kintone Database App - React Workshop Prep YouTube Thumbnail"
+    <img height="200" alt="How to Create a Kintone Database App YouTube Thumbnail"
       src="https://img.youtube.com/vi/pRtfn-8cf_I/hqdefault.jpg">
   </a>
 </p>
@@ -221,7 +223,7 @@ Check it out at [Slides.pdf](Slides.pdf)
 
   * [macOS with nodenv](#macos-with-nodenv)
   * [Windows with nvm-windows](#windows-with-nvm-windows)
-  * [📺 YouTube Quick Videos Going Over the Node Install & Create-React-App](#-quick-videos-going-over-the-node-install--create-react-app)
+  * [📺 Installing Node.js Video](#-installing-nodejs--video)
 
 ### Check if you already have Node.js or npm <!-- omit in toc -->
 
@@ -367,7 +369,7 @@ Alright! Your Windows is now armed with Node.js!
 
 Download the required packages by going opening a terminal inside the `frontend` folder & `backend` folder & running the `npm install` command!
 
-### ![YouTube](https://user-images.githubusercontent.com/30670749/92354102-a05c4000-f11c-11ea-8964-f96f052b1457.png) Quick Videos Going Over the Node Install & Create-React-App <!-- omit in toc -->
+### 📺 Installing Node.js | Video
 
 <p align="center">
   <a href="https://youtu.be/4Kw-i_rX3tY">

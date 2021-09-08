@@ -69,6 +69,7 @@ Then inside the folders, download the required packages with `npm install`.
 | Go inside the folder | `cd ~/Downloads/React_Workshop_by_Kintone/frontend` | `cd ~/Downloads/React_Workshop_by_Kintone/backend` |
 | What is inside?      | Code for the React App                              | Code for the Express server                        |
 | Install packages     | `npm install`                                       | `npm install`                                      |
+| Prep Tasks           |                                                     | Rename `.env.example` file to `.env` beforehand    |
 | To run the scripts   | `npm start`                                         | `npm start`                                        |
 
 ### ⚡ Notes ⚡ <!-- omit in toc -->
@@ -85,17 +86,17 @@ Then inside the folders, download the required packages with `npm install`.
 
 ## Overview of the Repo
 
-| File                                                     | Path                                     | Purpose                                                                     | Need to Modify?         |
-| -------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------- | ----------------------- |
-| [index.js](frontend/src/index.js)                        | `frontend/src/index.js`                  | Renders React code & passes it to index.html; `ReactDOM.render(...);`       | _Nope_                  |
-| [index.html](frontend/public/index.html)                 | `frontend/public/index.html`             | Homepage of the React App; `<div id="root"></div>`                          | _Nope_                  |
-| [App.js](frontend/src/App.js)                            | `frontend/src/App.js`                    | **Parent component** - Combines the list & form components                  | Yes! - Append POST      |
-| [getRecords.js](frontend/src/requests/getRecords.js)     | `frontend/src/requests/getRecords.js`    | Fetches Kintone records, transforms response, & returns array of list items | _Nope_                  |
-| [ListRecords.js](frontend/src/components/ListRecords.js) | `frontend/src/components/ListRecords.js` | **List component** - Creates a list from the list items array               | _Nope_                  |
-| [.env.example](backend/.env.example)                     | `backend/.env.example`                   | Holds your Kintone credentials                                              | Yes! - Rename it `.env` |
-| [server.js](backend/server.js)                           | `backend/server.js`                      | Sets up the Express server routes API requests from the frontend to Kintone | Yes! - Append POST      |
-| [postRecord.js](frontend/src/requests/postRecord.js)     | `frontend/src/requests/postRecord.js`    | Passes the POST API request from React to Express server                    | Yes! - Code it          |
-| [InputForm.js](frontend/src/components/InputForm.js)     | `frontend/src/components/InputForm.js`   | **Form component** - Create a form that submits a POST request              | Yes! - Code it          |
+| File                                                     | Path                                     | Purpose                                                                          | Need to Modify?    |
+| -------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- | ------------------ |
+| [index.js](frontend/src/index.js)                        | `frontend/src/index.js`                  | Renders React code & passes it to index.html; `ReactDOM.render(...);`            | _Nope_             |
+| [index.html](frontend/public/index.html)                 | `frontend/public/index.html`             | Homepage of the React App; `<div id="root"></div>`                               | _Nope_             |
+| [App.js](frontend/src/App.js)                            | `frontend/src/App.js`                    | **Parent component** - Combines the list & form components                       | Yes! - Append POST |
+| [getRecords.js](frontend/src/requests/getRecords.js)     | `frontend/src/requests/getRecords.js`    | Fetches Kintone records, transforms response, & returns array of list items      | _Nope_             |
+| [ListRecords.js](frontend/src/components/ListRecords.js) | `frontend/src/components/ListRecords.js` | **List component** - Creates a list from the list items array                    | _Nope_             |
+| [.env.example](backend/.env.example)                     | `backend/.env.example`                   | Template for `.env` file that holds your Kintone credentials                     | Yes! - Rename      |
+| [server.js](backend/server.js)                           | `backend/server.js`                      | Sets up the Express server that routes API requests from the frontend to Kintone | Yes! - Append POST |
+| [postRecord.js](frontend/src/requests/postRecord.js)     | `frontend/src/requests/postRecord.js`    | Passes the POST API request from React to Express server                         | Yes! - Code it     |
+| [InputForm.js](frontend/src/components/InputForm.js)     | `frontend/src/components/InputForm.js`   | **Form component** - Create a form that submits a POST request                   | Yes! - Code it     |
 
 ## Kintone Web Database & Credentials
 
@@ -433,13 +434,11 @@ This error is related to your Kintone credentials.
 
 ### No response when starting the Express server?
 
-Make sure you are inside the `backend` folder when starting the Express server.
-
-```bash
-cd ~/Downloads/React_Workshop_by_Kintone/backend
-
-npm start
-```
+1. Make sure you are inside the `backend` folder when starting the Express server.
+   * `cd ~/Downloads/React_Workshop_by_Kintone/backend`
+   * `npm start`
+2. Verify that you have renamed `.env.example` to `.env`
+   * Be sure to enter your Subdomain, App ID, and API Token in the `.env` file
 
 ### Got a `UnhandledPromiseRejectionWarning` error?
 

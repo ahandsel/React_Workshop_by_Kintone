@@ -327,12 +327,12 @@ Having different Node.js installations can lead to conflict issues.
 
 **Step 4**: The Setup-NVM-for-Windows installation wizard will walk you through the setup steps, including choosing the directory where both nvm-windows and Node.js will be installed.
 
-  * ![install-nvm-for-windows-wizard.png](https://docs.microsoft.com/en-us/windows/images/install-nvm-for-windows-wizard.png)
+  * ![install-nvm-for-windows-wizard.png](https://github.com/ahandsel/img/blob/master/Node_Install/install-nvm-for-windows-wizard.png?raw=true)
 
 **Step 5**: After the installation is complete, open PowerShell & enter `nvm ls`
 
   * `nvm ls` lists out installed Node versions (should be none at this point)
-  * ![windows-nvm-powershell-no-node.png](https://docs.microsoft.com/en-us/windows/images/windows-nvm-powershell-no-node.png)
+  * ![windows-nvm-powershell-no-node.png](https://github.com/ahandsel/img/blob/master/Node_Install/windows-nvm-powershell-no-node.png?raw=true)
 
 **Step 6**: Install Node.js inside the React Workshop folder (`React_Workshop_by_Kintone`)
 

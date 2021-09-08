@@ -50,6 +50,31 @@ app.get('/getData', cors(corsOptions), async (req, res) => {
 
 // This runs if a POST request calls for localhost:5000/postData
 
+app.post('/postData', cors(corsOptions), async (req, res) => {
+  const requestBody = {
+    'app': appID,
+    'record': {
+      'title': {
+        'value': req.body.title
+      },
+      'author': {
+        'value': req.body.author
+      }
+    }
+  };
+  const options = {
+    method: 'POST',
+    headers: {
+      'X-Cybozu-API-Token': apiToken,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(requestBody)
+  }
+  const response = await fetch(singleRecordEndpoint, options);
+  const jsonResponse = await response.json();
+  res.json(jsonResponse);
+});
+
 // - - - - - - - END - - - - - - - -
 
 app.listen(PORT, () => {

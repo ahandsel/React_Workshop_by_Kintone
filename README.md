@@ -252,45 +252,22 @@ Having different Node.js installations can lead to conflict issues.
 
 **Step 1**: Install nodenv with [Homebrew](https://brew.sh/)
 
-  * Update Homebrew:
-
-  ```shell
-  brew update && brew upgrade
-  ```
-
-  * Install nodenv:
-
-  ```shell
-  brew install nodenv
-  ```
+|                 |                               |
+| --------------- | ----------------------------- |
+| Update Homebrew | `brew update && brew upgrade` |
+| Install nodenv  | `brew install nodenv`         |
 
 **Step 2**: Set up nodenv shell integration
 
-  * Run the initialization command:
+|                                                       |                           |
+| ----------------------------------------------------- | ------------------------- |
+| Run the initialization command                        | `nodenv init`             |
+| Append the following line into the shell's rc/profile | `eval "$(nodenv init -)"` |
 
-  ```shell
-  nodenv init
-  ```
-
-  * Do as instructed by appending the following line into your shell's rc/profile file:
-
-  ```shell
-  eval "$(nodenv init -)"
-  ```
-
-    * For Zsh users:
-
-    ```shell
-    $ echo 'eval "$(nodenv init -)"' >> ~/.zshrc
-    $ cat < ~/.zshrc
-    ```
-
-    * For Bash users:
-
-    ```shell
-    $ echo 'eval "$(nodenv init -)"' >> ~/.bash_profile
-    $ cat < ~/.bash_profile
-    ```
+| For Zsh users                                | For Bash users                                      |
+| -------------------------------------------- | --------------------------------------------------- |
+| `echo 'eval "$(nodenv init -)"' >> ~/.zshrc` | `echo 'eval "$(nodenv init -)"' >> ~/.bash_profile` |
+| `cat < ~/.zshrc`                             | `cat < ~/.bash_profile`                             |
 
 **Step 3**: Implement the changes
 
@@ -300,21 +277,21 @@ Optional: Verify that nodenv is properly set up using [nodenv-doctor](https://gi
 
   * For those using Z shell (Zsh) shell:
 
-  ```shell
-  curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
-  ```
+    ```shell
+    curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
+    ```
 
   * Expected result:
 
-  ```shell
-  Checking for `nodenv' in PATH: /usr/local/bin/nodenv
-  Checking for nodenv shims in PATH: OK
-  Checking `nodenv install' support: /usr/local/bin/nodenv-install (node-build 3.0.22-4-g49c4cb9)
-  Counting installed Node versions: none
-    There aren't any Node versions installed under `~/.nodenv/versions'.
-    You can install Node versions like so: nodenv install 2.2.4
-  Auditing installed plugins: OK
-  ```
+    ```shell
+    Checking for `nodenv' in PATH: /usr/local/bin/nodenv
+    Checking for nodenv shims in PATH: OK
+    Checking `nodenv install' support: /usr/local/bin/nodenv-install (node-build 3.0.22-4-g49c4cb9)
+    Counting installed Node versions: none
+      There aren't any Node versions installed under `~/.nodenv/versions'.
+      You can install Node versions like so: nodenv install 2.2.4
+    Auditing installed plugins: OK
+    ```
 
 **Step 4**: Install Node.js inside the React Workshop folder (`React_Workshop_by_Kintone`)
 
@@ -322,9 +299,11 @@ Optional: Verify that nodenv is properly set up using [nodenv-doctor](https://gi
   * **Inside** `React_Workshop_by_Kintone` folder, install Node.js version `14.5.0`:
 
   ```shell
-  $ cd React_Workshop_by_Kintone/
-  $ nodenv install 14.5.0
-  $ nodenv local 14.5.0
+  cd React_Workshop_by_Kintone/
+
+  nodenv install 14.5.0
+
+  nodenv local 14.5.0
   ```
 
 Alright! Your Mac is now armed with Node.js!
@@ -361,9 +340,11 @@ Having different Node.js installations can lead to conflict issues.
   * Inside `React_Workshop_by_Kintone` folder, install Node.js version `14.5.0`:
 
   ```powershell
-  $ cd .\Documents\React_Workshop_by_Kintone
-  $ nvm install 14.5.0
-  $ nvm use 14.5.0
+  cd .\Documents\React_Workshop_by_Kintone
+
+  nvm install 14.5.0
+
+  nvm use 14.5.0
   ```
 
 Alright! Your Windows is now armed with Node.js!

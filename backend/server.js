@@ -45,38 +45,12 @@ app.get('/getData', cors(corsOptions), async (req, res) => {
   res.json(jsonResponse);
 });
 
-// Add the POST request in the section below
+/* Add a new route for a POST request using singleRecordEndpoint in the section below */
 // - - - - - - - START - - - - - - - -
 
 // This runs if a POST request calls for localhost:5000/postData
 
-app.post('/postData', cors(corsOptions), async (req, res) => {
-  const requestBody = {
-    'app': appID,
-    'record': {
-      'title': {
-        'value': req.body.title
-      },
-      'author': {
-        'value': req.body.author
-      }
-    }
-  };
-  const options = {
-    method: 'POST',
-    headers: {
-      'X-Cybozu-API-Token': apiToken,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(requestBody)
-  }
-  const response = await fetch(singleRecordEndpoint, options);
-  const jsonResponse = await response.json();
-  res.json(jsonResponse);
-});
-
 // - - - - - - - END - - - - - - - -
-// Add a New Route for a POST request using singleRecordEndpoint
 
 app.listen(PORT, () => {
   console.log(`\n Backend server listening at http://localhost:${PORT} \n Confirm if Kintone records are being retrieved at \n http://localhost:${PORT}/getData`);

@@ -30,7 +30,7 @@ const parameters = 'query=order by Record_number asc';
 
 // Kintone's record(s) endpoints
 const multipleRecordsEndpoint = `https://${subdomain}.kintone.com/k/v1/records.json?app=${appID}&${parameters}`
-const singleRecordEndpoint = `https://${subdomain}.kintone.com/k/v1/record.json?app=${appID}&${parameters}`;
+const singleRecordEndpoint = `https://${subdomain}.kintone.com/k/v1/record.json?app=${appID}`;
 
 // This route executes when a GET request lands on localhost:5000/getData
 app.get('/getData', cors(corsOptions), async (req, res) => {

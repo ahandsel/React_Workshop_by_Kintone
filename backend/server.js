@@ -30,7 +30,7 @@ const parameters = 'query=order by Record_number asc';
 
 // Kintone's record(s) endpoints
 const multipleRecordsEndpoint = `https://${subdomain}.kintone.com/k/v1/records.json?app=${appID}&${parameters}`
-const singleRecordEndpoint = `https://${subdomain}.kintone.com/k/v1/record.json?app=${appID}&${parameters}`;
+const singleRecordEndpoint = `https://${subdomain}.kintone.com/k/v1/record.json?app=${appID}`;
 
 // This route executes when a GET request lands on localhost:5000/getData
 app.get('/getData', cors(corsOptions), async (req, res) => {
@@ -49,6 +49,31 @@ app.get('/getData', cors(corsOptions), async (req, res) => {
 // - - - - - - - START - - - - - - - -
 
 // This runs if a POST request calls for localhost:5000/postData
+
+app.post('/postData', cors(corsOptions), async (req, res) => {
+  const requestBody = {
+    'app': appID,
+    'record': {
+      'title': {
+        'value': req.body.title
+      },
+      'author': {
+        'value': req.body.author
+      }
+    }
+  };
+  const options = {
+    method: 'POST',
+    headers: {
+      'X-Cybozu-API-Token': apiToken,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(requestBody)
+  }
+  const response = await fetch(singleRecordEndpoint, options);
+  const jsonResponse = await response.json();
+  res.json(jsonResponse);
+});
 
 // - - - - - - - END - - - - - - - -
 

@@ -10,7 +10,6 @@ Thank you for attending our **Kintone x React** workshop!
 * [Overview of the Repo](#overview-of-the-repo)
 * [Kintone Web Database & Credentials](#kintone-web-database--credentials)
   * [🚀 Getting your FREE Kintone Database](#-getting-your-free-kintone-database)
-    * [📺 Sign up for Kintone Developer Program & Developer License | Video](#-sign-up-for-kintone-developer-program--developer-license--video)
   * [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
     * [Kintone API Token](#kintone-api-token)
     * [📺 How to Create a Kintone Database App | Video](#-how-to-create-a-kintone-database-app--video)
@@ -74,8 +73,8 @@ Then inside the folders, download the required packages with `npm install`.
 
 ⚡ React requires **Node ≥ 10.16** & **npm ≥ 5.6** ⚡
 * Check the versions inside the `React_Workshop_by_Kintone` folder:
-  * `node –v`
-  * `npm –v`
+  * `node -v`
+  * `npm -v`
 * Not the correct versions or Confused? 🤔 → Check out the [Guide on Installing Node.js & npm](#guide-on-installing-nodejs--npm) Section
 
 ⚡ Note: Please ignore the package deprecation warnings ⚡
@@ -102,27 +101,13 @@ _Built for teamwork, designed by you_!
 
 ### 🚀 Getting your FREE Kintone Database
 
-#### ① Sign-Up for Developer Program Account (Website) 🌐 <!-- omit in toc -->
+[bit.ly/KDP_NEW](http://bit.ly/KDP_NEW)
+* ⚡ Only use lowercase, numbers, & hyphens in your subdomain
+* ⚠ Do not use uppercase nor special characters
 
-* [bit.ly/KDP_signup](https://bit.ly/KDP_signup)
-  * ⚠ Do NOT use Safari
-  * ⚡ Accept Cookies First
-  * ✅ Use Chrome & Firefox
-
-#### ② THEN Create a Kintone Subdomain (Database) 📂 <!-- omit in toc -->
-
-* [bit.ly/K_DevLic](http://bit.ly/K_DevLic)
-  * ⚡ Only use lowercase, numbers, & hyphens in your subdomain
-  * ⚠ Do not use uppercase nor special characters
-
-#### 📺 Sign up for Kintone Developer Program & Developer License | Video
-
-<p align="center">
-  <a href="https://youtu.be/Gzz8SbTuoFg">
-    <img height="200" alt="Create Kintone Database App - React Workshop Prep YouTube Thumbnail"
-      src="https://img.youtube.com/vi/Gzz8SbTuoFg/hqdefault.jpg">
-  </a>
-</p>
+|                                             |                                             |
+| ------------------------------------------- | ------------------------------------------- |
+| ![SignUp-1.png](./docs/img/SignUp-1.png) | ![SignUp-2.png](./docs/img/SignUp-2.png) |
 
 ### Create a Kintone Web Database App
 
@@ -136,8 +121,6 @@ Here are the required fields & their configurations for our workshop:
 | Text       | Author     | `author`   | The manga's author |
 
 Confused? 🤔 → Check out the [How to Create a Kintone Database App](https://youtu.be/pRtfn-8cf_I) video 📺  
-
-<!-- ![Create_App_Demo.gif Kintone_React_Workshop v2.1](https://user-images.githubusercontent.com/30670749/125898739-1bc018ac-1740-40e0-91cc-ab829192d2ea.gif) -->
 
 #### Kintone API Token
 

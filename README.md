@@ -1,16 +1,15 @@
-# React Workshop by [Kintone](https://developer.kintone.io/hc/en-us/) - Version 3
+# React Workshop by [Kintone](https://kintone.dev/) - Version 3
 
 ## Let's POST Data to a Web Database From a React Component <!-- omit in toc -->
 
 Thank you for attending our **Kintone x React** workshop!
 
-## Outline <!-- omit in toc --> <!-- markdownlint-disable MD007 -->
+## Outline <!-- omit in toc -->
 
 * [Get Started](#get-started)
 * [Overview of the Repo](#overview-of-the-repo)
 * [Kintone Web Database & Credentials](#kintone-web-database--credentials)
   * [🚀 Getting your FREE Kintone Database](#-getting-your-free-kintone-database)
-    * [📺 Sign up for Kintone Developer Program & Developer License | Video](#-sign-up-for-kintone-developer-program--developer-license--video)
   * [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
     * [Kintone API Token](#kintone-api-token)
     * [📺 How to Create a Kintone Database App | Video](#-how-to-create-a-kintone-database-app--video)
@@ -32,8 +31,6 @@ Thank you for attending our **Kintone x React** workshop!
   * [No response when starting the Express server?](#no-response-when-starting-the-express-server)
   * [Got a `UnhandledPromiseRejectionWarning` error?](#got-a-unhandledpromiserejectionwarning-error)
   * [Got a `GAIA_IA02` error?](#got-a-gaia_ia02-error)
-
-<!-- markdownlint-enable MD007 -->
 
 ## Get Started
 
@@ -75,10 +72,10 @@ Then inside the folders, download the required packages with `npm install`.
 ### ⚡ Notes ⚡ <!-- omit in toc -->
 
 ⚡ React requires **Node ≥ 10.16** & **npm ≥ 5.6** ⚡
-  * Check the versions inside the `React_Workshop_by_Kintone` folder:
-    * `node –v`
-    * `npm –v`
-  * Not the correct versions or Confused? 🤔 → Check out the [Guide on Installing Node.js & npm](#guide-on-installing-nodejs--npm) Section
+* Check the versions inside the `React_Workshop_by_Kintone` folder:
+  * `node -v`
+  * `npm -v`
+* Not the correct versions or Confused? 🤔 → Check out the [Guide on Installing Node.js & npm](#guide-on-installing-nodejs--npm) Section
 
 ⚡ Note: Please ignore the package deprecation warnings ⚡
 
@@ -100,31 +97,17 @@ Then inside the folders, download the required packages with `npm install`.
 
 ## Kintone Web Database & Credentials
 
-_Built for teamwork, designed by you_
+_Built for teamwork, designed by you_!
 
 ### 🚀 Getting your FREE Kintone Database
 
-#### ① Sign-Up for Developer Program Account (Website) 🌐 <!-- omit in toc -->
+[bit.ly/KDP_NEW](http://bit.ly/KDP_NEW)
+* ⚡ Only use lowercase, numbers, & hyphens in your subdomain
+* ⚠ Do not use uppercase nor special characters
 
-  * [bit.ly/KDP_signup](https://bit.ly/KDP_signup)
-    * ⚠ Do NOT use Safari
-    * ⚡ Accept Cookies First
-    * ✅ Use Chrome & Firefox
-
-#### ② THEN Create a Kintone Subdomain (Database) 📂 <!-- omit in toc -->
-
-  * [bit.ly/K_DevLic](http://bit.ly/K_DevLic)
-    * ⚡ Only use lowercase, numbers, & hyphens in your subdomain
-    * ⚠ Do not use uppercase nor special characters
-
-#### 📺 Sign up for Kintone Developer Program & Developer License | Video
-
-<p align="center">
-  <a href="https://youtu.be/Gzz8SbTuoFg">
-    <img height="200" alt="Create Kintone Database App - React Workshop Prep YouTube Thumbnail"
-      src="https://img.youtube.com/vi/Gzz8SbTuoFg/hqdefault.jpg">
-  </a>
-</p>
+|                                             |                                             |
+| ------------------------------------------- | ------------------------------------------- |
+| ![SignUp-1.png](./docs/img/SignUp-1.png) | ![SignUp-2.png](./docs/img/SignUp-2.png) |
 
 ### Create a Kintone Web Database App
 
@@ -138,8 +121,6 @@ Here are the required fields & their configurations for our workshop:
 | Text       | Author     | `author`   | The manga's author |
 
 Confused? 🤔 → Check out the [How to Create a Kintone Database App](https://youtu.be/pRtfn-8cf_I) video 📺  
-
-<!-- ![Create_App_Demo.gif Kintone_React_Workshop v2.1](https://user-images.githubusercontent.com/30670749/125898739-1bc018ac-1740-40e0-91cc-ab829192d2ea.gif) -->
 
 #### Kintone API Token
 
@@ -222,9 +203,9 @@ Check it out at [Slides.pdf](Slides.pdf)
 
 ## Guide on Installing Node.js & npm
 
-  * [macOS with nodenv](#macos-with-nodenv)
-  * [Windows with nvm-windows](#windows-with-nvm-windows)
-  * [📺 Installing Node.js Video](#-installing-nodejs--video)
+* [macOS with nodenv](#macos-with-nodenv)
+* [Windows with nvm-windows](#windows-with-nvm-windows)
+* [📺 Installing Node.js Video](#-installing-nodejs--video)
 
 ### Check if you already have Node.js or npm <!-- omit in toc -->
 
@@ -240,8 +221,8 @@ If Node & npm are missing, let's install them!
 
 **Options**:
 
-  * [macOS with nodenv](#macos-with-nodenv)
-  * [Windows with nvm-windows](#windows-with-nvm-windows)
+* [macOS with nodenv](#macos-with-nodenv)
+* [Windows with nvm-windows](#windows-with-nvm-windows)
 
 ### macOS with [nodenv](https://github.com/nodenv/nodenv)
 
@@ -275,13 +256,13 @@ Close & open a new Terminal window for the changes to take place.
 
 Optional: Verify that nodenv is properly set up using [nodenv-doctor](https://github.com/nodenv/nodenv-installer/blob/master/bin/nodenv-doctor) script.
 
-  * For those using Z shell (Zsh) shell:
+* For those using Z shell (Zsh) shell:
 
     ```shell
     curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
     ```
 
-  * Expected result:
+* Expected result:
 
     ```shell
     Checking for `nodenv' in PATH: /usr/local/bin/nodenv
@@ -295,8 +276,8 @@ Optional: Verify that nodenv is properly set up using [nodenv-doctor](https://gi
 
 **Step 4**: Install Node.js inside the React Workshop folder (`React_Workshop_by_Kintone`)
 
-  * Now you're ready to install specific Node.js versions!
-  * **Inside** `React_Workshop_by_Kintone` folder, install Node.js version `14.5.0`:
+* Now you're ready to install specific Node.js versions!
+* **Inside** `React_Workshop_by_Kintone` folder, install Node.js version `14.5.0`:
 
   ```shell
   cd React_Workshop_by_Kintone/
@@ -327,17 +308,17 @@ Having different Node.js installations can lead to conflict issues.
 
 **Step 4**: The Setup-NVM-for-Windows installation wizard will walk you through the setup steps, including choosing the directory where both nvm-windows and Node.js will be installed.
 
-  * ![install-nvm-for-windows-wizard.png](https://github.com/ahandsel/img/blob/master/Node_Install/install-nvm-for-windows-wizard.png?raw=true)
+* ![install-nvm-for-windows-wizard.png](https://github.com/ahandsel/img/blob/master/Node_Install/install-nvm-for-windows-wizard.png?raw=true)
 
 **Step 5**: After the installation is complete, open PowerShell & enter `nvm ls`
 
-  * `nvm ls` lists out installed Node versions (should be none at this point)
-  * ![windows-nvm-powershell-no-node.png](https://github.com/ahandsel/img/blob/master/Node_Install/windows-nvm-powershell-no-node.png?raw=true)
+* `nvm ls` lists out installed Node versions (should be none at this point)
+* ![windows-nvm-powershell-no-node.png](https://github.com/ahandsel/img/blob/master/Node_Install/windows-nvm-powershell-no-node.png?raw=true)
 
 **Step 6**: Install Node.js inside the React Workshop folder (`React_Workshop_by_Kintone`)
 
-  * Now you're ready to install specific Node.js versions!
-  * Inside `React_Workshop_by_Kintone` folder, install Node.js version `14.5.0`:
+* Now you're ready to install specific Node.js versions!
+* Inside `React_Workshop_by_Kintone` folder, install Node.js version `14.5.0`:
 
   ```powershell
   cd .\Documents\React_Workshop_by_Kintone
@@ -371,8 +352,8 @@ Here is a rundown of common problems that may occur & its solutions!
 1. Verify the Node.js & npm versions **inside** the `React_Workshop_by_Kintone` folder
 2. Just installed Node.js? Verify you configured Node.js versions **inside** the `React_Workshop_by_Kintone` folder
 
-  * Mac: `nodenv local 14.5.0`
-  * Windows: `nvm use 14.5.0`
+* Mac: `nodenv local 14.5.0`
+* Windows: `nvm use 14.5.0`
 
 ### How do I get my Kintone Subdomain?
 
@@ -380,14 +361,14 @@ It might be a bit confusing since you need to sign-up for [Developer Program Acc
 
 Check out our [Sign up for Kintone Developer Program & Developer License](https://youtu.be/Gzz8SbTuoFg) YouTube video:
 
-  * [![https://youtu.be/Gzz8SbTuoFg](https://img.youtube.com/vi/Gzz8SbTuoFg/mq1.jpg)](https://youtu.be/Gzz8SbTuoFg)
+* [![https://youtu.be/Gzz8SbTuoFg](https://img.youtube.com/vi/Gzz8SbTuoFg/mq1.jpg)](https://youtu.be/Gzz8SbTuoFg)
 
 ### React not updating after updating `server.js`?
 
 After making changes to `server.js`, be sure to restart the Express server On the `Terminal 2 - backend`!
 
-  * Stop the server: `ctrl + c`
-  * Start the server: `npm start`
+* Stop the server: `ctrl + c`
+* Start the server: `npm start`
 
 Then reload the browser showing the React App: [localhost:3000](http://localhost:3000/)
 
@@ -427,11 +408,11 @@ This error is related to your Kintone credentials.
 (node:5379) UnhandledPromiseRejectionWarning: FetchError: request to https://.kintone.com/k/v1/records.json?app= failed, reason: getaddrinfo ENOTFOUND .kintone.com
 ```
 
-  * It looks like Kintone API credentials are missing
-  * Be sure to enter your Subdomain, App ID, and API Token in the `.env` file
-  * Confused? 🤔 → Check out the [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file) section
+* It looks like Kintone API credentials are missing
+* Be sure to enter your Subdomain, App ID, and API Token in the `.env` file
+* Confused? 🤔 → Check out the [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file) section
 
 ### Got a `GAIA_IA02` error?
 
-  * Enter the App's API Token in `.env` file as `APITOKEN = ""`
-  * Be sure to hit the `save` button & the `Update App` button to implement the API Token change.
+* Enter the App's API Token in `.env` file as `APITOKEN = ""`
+* Be sure to hit the `save` button & the `Update App` button to implement the API Token change.

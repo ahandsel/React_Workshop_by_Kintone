@@ -27,7 +27,7 @@ export default async function getRecords() {
 
       return <li key={uniqueKey}><b>{title}</b> written by {author}</li>
     }
-  )
+  );
 
   return ListItemArray;
 };

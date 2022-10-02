@@ -47,8 +47,8 @@ This error is related to your Kintone credentials.
 
 1. Verify that you have created a `.env` file with your Kintone credentials inside the `backend` folder
 2. Verify the Kintone credentials are correct: Subdomain, App ID, and API Token
-3. Verify that the Kintone App is configured as done in the [Create a Kintone Web Database App](#create-a-kintone-web-database-app) section
-4. Verify that the Kintone Web Database App is updated after generating the [Kintone API Token](#kintone-api-token)
+3. Verify that the Kintone App is configured as done in the [Create a Kintone Web Database App](Steps.md#step-2-create-a-kintone-web-database-app) section
+4. Verify that the Kintone Web Database App is updated after generating the [Kintone API Token](Steps.md#step-2---b-generate-a-kintone-api-token)
 
 ## No response when starting the Express server?
 
@@ -66,7 +66,7 @@ This error is related to your Kintone credentials.
 
 * It looks like Kintone API credentials are missing
 * Be sure to enter your Subdomain, App ID, and API Token in the `.env` file
-* Confused? 🤔 → Check out the [🔐 Securely input your credentials in a `.env` file](#-securely-input-your-credentials-in-a-env-file) section
+* Confused? 🤔 → Check out the [🔐 Securely input your credentials in a `.env` file](steps.md#step-3-create-a-env-file) section
 
 ## Got a `GAIA_IA02` error?
 

@@ -1,13 +1,33 @@
 # React Workshop by [Kintone](https://kintone.dev/) - Version 3
 
+## Overview of the Repo
+
+| File                                                     | Path                                     | Purpose                                                                          | Need to Modify?    |
+| -------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- | ------------------ |
+| 📗 [README.md]                                            | `README.md`                              | Notes on how to configure this Kintone x React App setup                         | _Nope_             |
+| 📕 [Slides.pdf](Slides.pdf)                               | `Slides.pdf`                             | Slides for the workshop                                                          | _Nope_             |
+| 📕 [Install_NodeJS.md](docs/Install_NodeJS.md)            | `docs/Install_NodeJS.md`                 | Step-by-step guide on how to install NodeJS & npm                                | _Nope_             |
+| 📕 [Steps.md](docs/Steps.md)                              | `docs/Steps.md`                          | Step-by-step guide on how to setup the Kintone x React App                       | _Nope_             |
+| 📕 [Debugging_Log.md](docs/Debugging_Log.md)              | `docs/Debugging_Log.md`                  | Common bugs & its solutions for this workshop                                    | _Nope_             |
+| 📕 [Change_FieldCodes.md](docs/Change_FieldCodes.md)      | `docs/Change_FieldCodes.md`              | Guide on how to modify this codebase to use your own field codes.                | _Nope_             |
+| [index.js](frontend/src/index.js)                        | `frontend/src/index.js`                  | Renders React code & passes it to index.html; `ReactDOM.render(...);`            | _Nope_             |
+| [index.html](frontend/public/index.html)                 | `frontend/public/index.html`             | Homepage of the React App; `<div id="root"></div>`                               | _Nope_             |
+| [App.js](frontend/src/App.js)                            | `frontend/src/App.js`                    | **Parent component** - Combines the list & form components                       | Yes! - Append POST |
+| [getRecords.js](frontend/src/requests/getRecords.js)     | `frontend/src/requests/getRecords.js`    | Fetches Kintone records, transforms response, & returns array of list items      | _Nope_             |
+| [ListRecords.js](frontend/src/components/ListRecords.js) | `frontend/src/components/ListRecords.js` | **List component** - Creates a list from the list items array                    | _Nope_             |
+| [.env.example](backend/.env.example)                     | `backend/.env.example`                   | Template for `.env` file that holds your Kintone credentials                     | Yes! - Rename      |
+| [server.js](backend/server.js)                           | `backend/server.js`                      | Sets up the Express server that routes API requests from the frontend to Kintone | Yes! - Append POST |
+| [postRecord.js](frontend/src/requests/postRecord.js)     | `frontend/src/requests/postRecord.js`    | Passes the POST API request from React to Express server                         | Yes! - Code it     |
+| [InputForm.js](frontend/src/components/InputForm.js)     | `frontend/src/components/InputForm.js`   | **Form component** - Create a form that submits a POST request                   | Yes! - Code it     |
+
 ## Let's POST Data to a Web Database From a React Component <!-- omit in toc -->
 
 Thank you for attending our **Kintone x React** workshop!
 
 ## Outline <!-- omit in toc -->
 
-* [Get Started](#get-started)
 * [Overview of the Repo](#overview-of-the-repo)
+* [Get Started](#get-started)
 * [Kintone Web Database & Credentials](#kintone-web-database--credentials)
   * [🚀 Getting your FREE Kintone Database](#-getting-your-free-kintone-database)
   * [Create a Kintone Web Database App](#create-a-kintone-web-database-app)
@@ -81,20 +101,6 @@ Then inside the folders, download the required packages with `npm install`.
 
 🔎 The `npm install` command installs the required dependencies defined in the package.json files (in both the [frontend](frontend/package.json) & [backend](backend/package.json) folders) and generates a node_modules folder with the installed modules.
 
-## Overview of the Repo
-
-| File                                                     | Path                                     | Purpose                                                                          | Need to Modify?    |
-| -------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- | ------------------ |
-| [index.js](frontend/src/index.js)                        | `frontend/src/index.js`                  | Renders React code & passes it to index.html; `ReactDOM.render(...);`            | _Nope_             |
-| [index.html](frontend/public/index.html)                 | `frontend/public/index.html`             | Homepage of the React App; `<div id="root"></div>`                               | _Nope_             |
-| [App.js](frontend/src/App.js)                            | `frontend/src/App.js`                    | **Parent component** - Combines the list & form components                       | Yes! - Append POST |
-| [getRecords.js](frontend/src/requests/getRecords.js)     | `frontend/src/requests/getRecords.js`    | Fetches Kintone records, transforms response, & returns array of list items      | _Nope_             |
-| [ListRecords.js](frontend/src/components/ListRecords.js) | `frontend/src/components/ListRecords.js` | **List component** - Creates a list from the list items array                    | _Nope_             |
-| [.env.example](backend/.env.example)                     | `backend/.env.example`                   | Template for `.env` file that holds your Kintone credentials                     | Yes! - Rename      |
-| [server.js](backend/server.js)                           | `backend/server.js`                      | Sets up the Express server that routes API requests from the frontend to Kintone | Yes! - Append POST |
-| [postRecord.js](frontend/src/requests/postRecord.js)     | `frontend/src/requests/postRecord.js`    | Passes the POST API request from React to Express server                         | Yes! - Code it     |
-| [InputForm.js](frontend/src/components/InputForm.js)     | `frontend/src/components/InputForm.js`   | **Form component** - Create a form that submits a POST request                   | Yes! - Code it     |
-
 ## Kintone Web Database & Credentials
 
 _Built for teamwork, designed by you_!
@@ -105,8 +111,8 @@ _Built for teamwork, designed by you_!
 * ⚡ Only use lowercase, numbers, & hyphens in your subdomain
 * ⚠ Do not use uppercase nor special characters
 
-|                                             |                                             |
-| ------------------------------------------- | ------------------------------------------- |
+|                                          |                                          |
+| ---------------------------------------- | ---------------------------------------- |
 | ![SignUp-1.png](./docs/img/SignUp-1.png) | ![SignUp-2.png](./docs/img/SignUp-2.png) |
 
 ### Create a Kintone Web Database App
@@ -161,7 +167,7 @@ APITOKEN = ""
 Here is an example `.env` file.
 
 ```.env
-SUBDOMAIN = "devevents"
+SUBDOMAIN = "example"
 APPID = "1"
 APITOKEN = "dXNlckBleGFLtcGxlmNvbTpzZWNyZXQe9q3IhtcG"
 ```

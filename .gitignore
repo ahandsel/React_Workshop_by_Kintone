@@ -18,7 +18,6 @@
 .env.test.local
 .env.production.local
 temp.*
-.vscode
 
 npm-debug.log*
 yarn-debug.log*

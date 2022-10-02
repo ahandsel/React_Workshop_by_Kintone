@@ -7,7 +7,7 @@
   * [Step 2 - A: Build the Kintone App](#step-2---a-build-the-kintone-app)
   * [Step 2 - B: Generate a Kintone API Token](#step-2---b-generate-a-kintone-api-token)
   * [Step 2 Video: How to Create a Kintone Database App](#step-2-video-how-to-create-a-kintone-database-app)
-  * [Step 3: Create a `.env` File](#step-3-create-a-env-file)
+* [Step 3: Create a `.env` File](#step-3-create-a-env-file)
 * [Expected Results](#expected-results)
   * [Right After `npm install`](#right-after-npm-install)
   * [After Creating a `.env`](#after-creating-a-env)
@@ -110,7 +110,7 @@ Confused? 🤔 → Check out the [Get the API Token](https://youtu.be/pRtfn-8cf_
   </a>
 </p>
 
-### Step 3: Create a `.env` File
+## Step 3: Create a `.env` File
 
 1. Using the [backend/.env.example](backend/.env.example) file as a template, create a `.env` file.
 1. Then input your Kintone credentials like the following:

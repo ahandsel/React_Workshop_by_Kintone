@@ -9,6 +9,7 @@ Here is a rundown of common problems that may occur & its solutions!
 * [No response when starting the Express server?](#no-response-when-starting-the-express-server)
 * [Got a `UnhandledPromiseRejectionWarning` error?](#got-a-unhandledpromiserejectionwarning-error)
 * [Got a `GAIA_IA02` error?](#got-a-gaia_ia02-error)
+* [Got a `GAIA_IQ11` `Specified field (Record_number) not found` error?](#got-a-gaia_iq11-specified-field-record_number-not-found-error)
 
 ## `npm install` command is not working
 
@@ -71,3 +72,18 @@ This error is related to your Kintone credentials.
 
 * Enter the App's API Token in `.env` file as `APITOKEN = ""`
 * Be sure to hit the `save` button & the `Update App` button to implement the API Token change.
+
+## Got a `GAIA_IQ11` `Specified field (Record_number) not found` error?
+
+If you got this error, then your Record Number field's field code is not set to `Record_number`.
+
+Error Message:
+
+```json
+{"code":"GAIA_IQ11","id":"vgK7CfZlVME2T65afg8g","message":"Specified field (Record_number) not found."}
+```
+
+Fix:
+1. Add the Record Number field to the App
+1. Set the field code to `Record_number`
+1. Save & Update the App
